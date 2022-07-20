@@ -37,10 +37,14 @@
           <li class="nav-item">
             <a class="nav-link active" href="index.php">Home</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="category.php">category</a>
+          </li>
               <?php //show_cat(); ?>
           <li class="nav-item">
             <a class="nav-link" href="contact.php">Contact</a>
           </li>
+          
         </ul>
 
       </div>
