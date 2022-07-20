@@ -48,7 +48,7 @@
           <div class="row pt-5">
             <div class="col-12 text-center">
               <a class="absolute-toggle d-block d-md-none" data-toggle="collapse" href="#navbarMenu" role="button" aria-expanded="false" aria-controls="navbarMenu"><span class="burger-lines"></span></a>
-              <h1 class="site-logo"><a href="index.php">Wordify</a></h1>
+              <h1 class="site-logo"><a href="index.php">Blogging System</a></h1>
             </div>
           </div>
         </div>
@@ -65,7 +65,7 @@
                 <li class="nav-item">
                   <a class="nav-link" href="#">Business</a>
                 </li>
-                <li class="nav-item dropdown">
+                <!-- <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="category.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Travel</a>
                   <div class="dropdown-menu" aria-labelledby="dropdown04">
                     <a class="dropdown-item" href="category.html">Asia</a>
@@ -73,9 +73,9 @@
                     <a class="dropdown-item" href="category.html">Dubai</a>
                     <a class="dropdown-item" href="category.html">Africa</a>
                     <a class="dropdown-item" href="category.html">South America</a>
-                  </div>
+                  </div> -->
 
-                </li>
+                <!-- </li>
 
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="category.html" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
@@ -87,12 +87,12 @@
                     <a class="dropdown-item" href="category.html">Business</a>
                   </div>
 
-                </li>
+                </li> -->
+                <!-- <li class="nav-item">
+                  <a class="nav-link" href="about.">About</a>
+                </li> -->
                 <li class="nav-item">
-                  <a class="nav-link" href="about.html">About</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" href="contact.html">Contact</a>
+                  <a class="nav-link active" href="contact.php">Contact</a>
                 </li>
               </ul>
               
