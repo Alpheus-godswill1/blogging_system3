@@ -20,10 +20,10 @@
 					<div class="col-sm-6">
 						<form action="includes/functions.php" method="post">
 							<div class="form-group">
-								<input type="text" name="cat_title" placeholder="Category Title" class="form-control">
+								<input type="text" name="cat_tit" placeholder="Category Title" class="form-control">
 							</div>
 							<div class="form-group">
-								<input type="submit" name="cat_add" value="Add Category" class="btn btn-primary">
+								<input type="submit" name="cat_in" value="Add Category" class="btn btn-primary">
 							</div>
 						</form>
 

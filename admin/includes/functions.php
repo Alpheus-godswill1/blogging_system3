@@ -1,6 +1,21 @@
 <?php
   include "db.php";
-  
+  ?>
+  <?php
+
+function  add_category(){
+  global $connect;
+  if(isset($_POST['cat_in'])){
+    if (empty($_POST['cat_tit'])) {
+      echo"<script>alert('This field cannot be empty')</script>";
+      header("Location: ../categories.php?Field_cannot_be_empty");
+    }else{
+      $cat_tit = $_POST['cat_tit'];
+    }
+  }
+}
+add_category();
+
 //   function add_category(){
 //   global $connection;
 
