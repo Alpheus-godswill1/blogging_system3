@@ -40,7 +40,7 @@
           <li class="nav-item">
             <a class="nav-link" href="category.php">category</a>
           </li>
-              <?php //show_cat(); ?>
+              <?php display_categories() ?>
           <li class="nav-item">
             <a class="nav-link" href="contact.php">Contact</a>
           </li>

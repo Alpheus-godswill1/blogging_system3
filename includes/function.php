@@ -1,18 +1,21 @@
 <?php
  include "db.php";
 
-//  function show_cat(){
-//    global $connection;
+function display_categories(){
+    global $connect;
+    $sql = "SELECT * FROM categories";
+    $result = mysqli_query($connect,$sql);
+    if (!$result) {
+        die("Could_not_connect_to_database_to_fetch_data_from_it.".mysqli_error($connect));
+    }else{
+        while ($row= mysqli_fetch_assoc($result)) {
+            $cat_id = $row['cat_id'];
+            $cat_tit = $row['cat_title'];
+            echo "<li class='nav-item dropdown'><a class='nav-link' href='category.php?cat_id=$cat_id'>{$cat_tit}</a></li>";
+        }
+    }
 
-//    $query = "SELECT * FROM categories";
-//    $result = mysqli_query($connection, $query);
-//    while($row = mysqli_fetch_array($result)){
-//      $cat_id = $row['cat_id'];
-//      $cat_title = $row['cat_title'];
-//      echo "<li class='nav-item dropdown'><a class='nav-link' href='category.php?cat_id=$cat_id'>{$cat_title}</a></li>";
-//    }
-//  }
-
+}
 
 
 
