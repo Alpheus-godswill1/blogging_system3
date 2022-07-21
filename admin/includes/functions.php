@@ -4,74 +4,97 @@
   <?php
 
 function  add_category(){
+  //global variable declaration
   global $connect;
+
+  //button is being clicked
   if(isset($_POST['cat_in'])){
+  
+    //check if data field is empty.
     if (empty($_POST['cat_tit'])) {
       echo"<script>alert('This field cannot be empty')</script>";
+
+      //redirecting to page if data field is empty and submitted
       header("Location: ../categories.php?Field_cannot_be_empty");
     }else{
+
+      //getting data from field in form
       $cat_tit = $_POST['cat_tit'];
+
+      // inserting data into database.table 
+      $sql = "INSERT INTO `categories`(cat_title) VALUES('$cat_tit')";
+      $result = mysqli_query($connect,$sql);
+
+      //Validating the script is working properly
+      if(!$result){
+
+        //killing script if anything goes wrong
+        die("something went wrong check code ".mysqli_error($connect));
+      }else{
+        //redirecting to the correct url if the whole process passes
+        header("Location: ../categories.php?data_inserted_successfully_into_database.");
+      }
+
     }
   }
 }
+//calling function
 add_category();
 
-//   function add_category(){
-//   global $connection;
 
-//   if (isset($_POST['cat_add'])) {
-//       if (empty($_POST['cat_title'])) {
-//         header("Location: ../categories.php?Field_cannot_be_empty");
-//       }else{
-//         $cat_title = $_POST['cat_title'];
-//         $query = "INSERT INTO categories(cat_title)VALUES('$cat_title')";
-//         $result = mysqli_query($connection, $query);
+function call_category(){
+  //declaring a global variable
+ global $connect;
 
-//         if (!$result) {
-//           die("Could not send data " . mysqli_error($connection));
-//         }
-//         else{
-//           header("Location: ../categories.php?category_added");
-//         }
+ //SQL query for pulling data from database.tabel
+ $sql = "SELECT * FROM categories";
 
-//       }
-//   }
+ //making sure query is well written an connected properly
+ $result = mysqli_query($connect,$sql);
 
-// }
-// add_category();
+ //using while loops to get data from database.table
+  while ($row = mysqli_fetch_assoc($result)) {
+    $cat_id = $row['cat_id'];
+    $cat_tit = $row['cat_title'];
 
-// function show_category(){
-//   global $connection;
-//   $query = "SELECT * FROM categories";
-//   $result = mysqli_query($connection, $query);
+    echo "<tr>";
+        echo "<td>{$cat_id}</td>";
+        echo "<td>{$cat_tit}</td>";
+        echo "<td><a href='categories.php?delete_cat={$cat_id}'>Delete</a></td>";
+    echo "</tr>";
+  }
+}
 
-//   while ($row = mysqli_fetch_assoc($result)) {
-//     $cat_id = $row['cat_id'];
-//     $cat_title = $row['cat_title'];
 
-//     echo "<tr>";
-//     echo "<td>{$cat_id}</td>";
-//     echo "<td>{$cat_title}</td>";
-//     echo "<td><a href='categories.php?delete_cat={$cat_id}'>Delete</a></td>";
-//     echo "</tr>";
-//   }
-// }
 
-// function delete_category(){
-//   global $connection;
-//   if (isset($_GET['delete_cat'])) {
-//     $cat_id = $_GET['delete_cat'];
-//     $query = "DELETE FROM categories WHERE cat_id = $cat_id";
-//     $result = mysqli_query($connection, $query);
-//     if (!$result) {
-//       die("Could not delete data " . mysqli_error($connection));
-//     }
-//     else{
-//       header("Location: categories.php?category_deleted");
-//     }
-//   }
-// }
-// delete_category();
+function delete_cats(){
+  //declaring global variable
+  global $connect;
+
+  //getting data from url
+  if(isset($_GET['delete_cat'])){
+    
+    //variable from the url
+    $cat_id_del = $_GET['delete_cat'];
+
+    //query to delete the file gotten from the url
+    $sql = "DELETE FROM categories WHERE cat_id = '$cat_id_del' ";
+
+    //making sure the $connection is running properly
+    $result = mysqli_query($connect,$sql);
+
+    //checking if anything has gone wrong when writing this code
+    if (!$result) {
+      die("Couldn't_delete_this_category_property_due_to_unwarranted_problems".mysqli_error($connect));
+    }else{
+
+      //if everything ran properly, then the page will be redirected to this url.
+      header("Location: ../admin/categories.php?category_property_was_successfully_deleted");
+    }
+  }
+}
+delete_cats();
+
 
 // function add_post(){
 //   global $connection;

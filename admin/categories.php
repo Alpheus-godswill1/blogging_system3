@@ -36,7 +36,7 @@
                     <th>Delete</th>
                  </thead>
                  <tbody>
-                   <?php// show_category(); ?>
+                 <?php call_category(); ?>
                  </tbody>
                </table>
 						</div>
