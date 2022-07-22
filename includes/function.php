@@ -3,7 +3,7 @@
 
 function display_categories(){
     global $connect;
-    $sql = "SELECT * FROM categories";
+    $sql = "SELECT * FROM categories ORDER BY cat_id DESC LIMIT 2 ";
     $result = mysqli_query($connect,$sql);
     if (!$result) {
         die("Could_not_connect_to_database_to_fetch_data_from_it.".mysqli_error($connect));

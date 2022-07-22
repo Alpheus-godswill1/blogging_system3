@@ -18,7 +18,8 @@
     <th>Delete</th>
   </thead>
   <tbody>
-  <?php //show_posts(); ?>
+    <!-- This php function is written in this directory ./admin/includes/view_post.php -->
+  <?php display_posts(); ?>
   </tbody>
 </table>
 </div>

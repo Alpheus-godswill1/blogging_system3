@@ -1,13 +1,32 @@
+<?php
+//query to get the data gotten from the database.posts table, but with a limit which is 1.
+$query = "SELECT * FROM posts ORDER BY post_id DESC LIMIT 1";
+$result = mysqli_query($connect, $query);
+
+//get the number of rows in the database.posts table
+$span = mysqli_num_rows($result);
+
+//checking if anything goes wrong,then the script should be killed immediately
+if (!$result) {
+  die("Couldn't_call_data_from_database.posts_table".mysqli_error($connect));
+}else {
+    //using the while loop to get data from database.posts table 
+  while($row = mysqli_fetch_assoc($result)){
+    $post_content = $row['post_content'];
+    $post_image = $row['post_image'];
+  ?>
+
+    <!-- echoing out the data in this style. -->
 <footer class="site-footer">
         <div class="container">
           <div class="row mb-5">
             <div class="col-md-4">
               <h3>About Us</h3>
               <p class="mb-4">
-                <img src="images/img_1.jpg" alt="Image placeholder" class="img-fluid">
+                <img src="./admin/images/<?php echo $post_image;?>" alt="Image placeholder" class="img-fluid">
               </p>
 
-              <p>Lorem ipsum dolor sit amet sa ksal sk sa, consectetur adipisicing elit. Ipsa harum inventore reiciendis. <a href="#">Read More</a></p>
+              <p><?php echo $post_content?><a href="#"></a></p>
             </div>
             <div class="col-md-6 ml-auto">
               <div class="row">
@@ -15,42 +34,47 @@
                   <h3>Latest Post</h3>
                   <div class="post-entry-sidebar">
                     <ul>
+            <?php
+  }
+}      
+            ?>
+                    <?php
+$query = "SELECT * FROM posts ORDER BY post_id DESC LIMIT 4";
+$result = mysqli_query($connect, $query);
+$span = mysqli_num_rows($result);
+if (!$result) {
+  die("Couldn't_call_data_from_database.posts_table".mysqli_error($connect));
+}else {
+  while($row = mysqli_fetch_assoc($result)){
+    $post_id = $row['post_id'];
+    $post_title = $row['post_title'];
+    $post_author = $row['post_author'];
+    $post_category = $row['post_category'];
+    $post_category_id = $row['post_category_id'];
+    $post_content = $row['post_content'];
+    $post_tags = $row['post_tags'];
+    $post_status = $row['post_status'];
+    $post_image = $row['post_image'];
+    $post_date = $row['post_date'];
+    $post_views = $row['post_views'];
+    $post_comment_count = $row['post_comment_count'];
+
+  ?>
                       <li>
                         <a href="">
-                          <img src="images/img_6.jpg" alt="Image placeholder" class="mr-4">
+                          <img src="./admin/images/<?php echo $post_image;?>" alt="Image placeholder" class="mr-4">
                           <div class="text">
-                            <h4>How to Find the Video Games of Your Youth</h4>
+                            <h4><?php echo $post_title;?></h4>
                             <div class="post-meta">
-                              <span class="mr-2">March 15, 2018 </span> &bullet;
-                              <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
+                              <span class="mr-2"><?php echo $post_date;?></span> &bullet;
+                              <span class="ml-2"><span class="fa fa-comments"></span><?php echo $span;?></span>
                             </div>
                           </div>
                         </a>
                       </li>
-                      <li>
-                        <a href="">
-                          <img src="images/img_3.jpg" alt="Image placeholder" class="mr-4">
-                          <div class="text">
-                            <h4>How to Find the Video Games of Your Youth</h4>
-                            <div class="post-meta">
-                              <span class="mr-2">March 15, 2018 </span> &bullet;
-                              <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
-                            </div>
-                          </div>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="">
-                          <img src="images/img_4.jpg" alt="Image placeholder" class="mr-4">
-                          <div class="text">
-                            <h4>How to Find the Video Games of Your Youth</h4>
-                            <div class="post-meta">
-                              <span class="mr-2">March 15, 2018 </span> &bullet;
-                              <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
-                            </div>
-                          </div>
-                        </a>
-                      </li>
+                      <?php }
+                          }
+                      ?>
                     </ul>
                   </div>
                 </div>

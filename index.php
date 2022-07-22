@@ -30,7 +30,7 @@
                 <form action="search.php" class="search-form" method="post">
                   <div class="form-group">
                     <span class="icon fa fa-search"></span>
-                    <input type="text" name="search" class="form-control" id="s" placeholder="Type a keyword and hit enter">
+                    <input type="text" name="search" class="form-control" id="s" placeholder="Type a keyword...">
                   </div>
                 </form>
               </div>

@@ -123,8 +123,11 @@ function insertPostData(){
         echo "<script>alert('Image_Was_Not_Uploaded_Successfully')</script>";
       }
     }
+    //Inserting data into database.posts table 
     $sql = "INSERT INTO `posts`(post_title,post_category,post_category_id,post_author,post_content,post_date,post_image,post_comment_count,post_views,post_tags,post_status) VALUES('$post_title','$post_category','$post_category_id','$post_author','$post_content','$post_date','$file','$post_comment_count','$post_views','$post_tags','$post_status')";
     $result = mysqli_query($connect,$sql);
+
+    //checking if anything goes wrong,then the script should be killed immediately
     if (!$result) {
      die("Couldn't_send_data_to_database.posts_tabel".mysqli_error($connect));
     }else {
@@ -136,42 +139,53 @@ function insertPostData(){
 }
 insertPostData();
 
-// function show_posts(){
-//   global $connection;
-//   $query = "SELECT * FROM posts";
-//   $result = mysqli_query($connection, $query);
 
-//   while ($row = mysqli_fetch_assoc($result)) {
-//     $post_id = $row['post_id'];
-//     $post_title = $row['post_title'];
-//     $post_author = $row['post_author'];
-//     $post_category = $row['post_category'];
-//     $post_category_id = $row['post_category_id'];
-//     $post_content = $row['post_content'];
-//     $post_tags = $row['post_tags'];
-//     $post_status = $row['post_status'];
-//     $post_image = $row['post_image'];
-//     $date = $row['post_date'];
-//     $post_views = $row['post_views'];
-//     $post_comment_count = $row['post_comment_count'];
+//READ POST : C R UD
+function display_posts(){
+  //declaring a global connection to database;
+  global $connect;
+  $sql = "SELECT * FROM posts";
+  $result = mysqli_query($connect,$sql);
 
-//     echo "<tr>";
-//     echo "<td>{$post_id}</td>";
-//     echo "<td>{$post_title}</td>";
-//     echo "<td>{$post_author}</td>";
-//     echo "<td>{$post_category}</td>";
-//     echo "<td>{$post_status}</td>";
-//     echo "<td><img src='images/{$post_image}' width='50px'></td>";
-//     echo "<td>{$post_content}</td>";
-//     echo "<td>{$date}</td>";
-//     echo "<td>{$post_tags}</td>";
-//     echo "<td>{$post_comment_count}</td>";
-//     echo "<td>{$post_views}</td>";
-//     echo "<td><a href='posts.php?approve_post=$post_id'>Approve</a></td>";
-//     echo "<td><a href='posts.php?unapprove_post=$post_id'>Unapprove</a></td>";
-//     echo "<td><a href='posts.php?edit_post=$post_id'>Edit</a></td>";
-//     echo "<td><a href='posts.php?delete_post=$post_id'>Delete</a></td>";
-//     echo "</tr>";
+  //checking if anything goes wrong,then the script should be killed immediately
+  if (!$result) {
+    die("Couldn't_send_data_to_database.posts_tabel".mysqli_error($connect));
+  }else {
+    //using the while loop to get data from database.posts table 
+  while ($row = mysqli_fetch_assoc($result)) {
+    $post_id = $row['post_id'];
+    $post_title = $row['post_title'];
+    $post_author = $row['post_author'];
+    $post_category = $row['post_category'];
+    $post_category_id = $row['post_category_id'];
+    $post_content = $row['post_content'];
+    $post_tags = $row['post_tags'];
+    $post_status = $row['post_status'];
+    $post_image = $row['post_image'];
+    $date = $row['post_date'];
+    $post_views = $row['post_views'];
+    $post_comment_count = $row['post_comment_count'];
 
-//   }
-// }
+    //echoing out the data in this style.
+
+    echo "<tr>";
+    echo "<td>{$post_id}</td>";
+    echo "<td>{$post_title}</td>";
+    echo "<td>{$post_author}</td>";
+    echo "<td>{$post_category}</td>";
+    echo "<td>{$post_status}</td>";
+    echo "<td><img src='images/{$post_image}' width='50px'></td>";
+    echo "<td>{$post_content}</td>";
+    echo "<td>{$date}</td>";
+    echo "<td>{$post_tags}</td>";
+    echo "<td>{$post_comment_count}</td>";
+    echo "<td>{$post_views}</td>";
+    echo "<td><a href='posts.php?approve_post=$post_id'>Approve</a></td>";
+    echo "<td><a href='posts.php?unapprove_post=$post_id'>Unapprove</a></td>";
+    echo "<td><a href='posts.php?edit_post=$post_id'>Edit</a></td>";
+    echo "<td><a href='posts.php?delete_post=$post_id'>Delete</a></td>";
+    echo "</tr>";
+  }
+
+  }
+}
