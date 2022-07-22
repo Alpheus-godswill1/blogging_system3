@@ -17,6 +17,35 @@
 						Welcome to the Administration Panel
 					</h1>
 
+			<?php 
+			if(isset($_GET['rule'])){
+				//declaring the global connection to the database
+				 global $connect;
+				$source_get = $_GET['rule'];
+				
+				//using the switch statements to check the right part to go if the code works
+				switch ($source_get) {
+					case 'add_one_more':
+						include "./includes/add_post.php";
+						break;
+					case 'view_post':
+						include "./includes/view_post.php";
+						break;
+					default:
+						include "./includes/navigation.php";
+						break;
+				}
+			}
+			
+			
+			
+
+
+
+			?>
+
+
+
 
 					<?php
 		// 				if (isset($_GET['source'])) {
