@@ -95,42 +95,46 @@ function delete_cats(){
 }
 delete_cats();
 
+function insertPostData(){
+  //declaring global connection to the database.
+  global $connect;
+  if (isset($_POST['push_post'])) {
+    //getting other files from the form.
+    $post_title = mysqli_real_escape_string($connect,$_POST['title']);
+    $post_author =  mysqli_real_escape_string($connect,$_POST['author']);
+    $post_category =  mysqli_real_escape_string($connect,$_POST['categ']);
+    $post_category_id =  mysqli_real_escape_string($connect,$_POST['categ_id']);
+    $post_content =  mysqli_real_escape_string($connect,$_POST['content']);
+    $post_tags =  mysqli_real_escape_string($connect,$_POST['taggs']);
+    $post_status =  mysqli_real_escape_string($connect,$_POST['status']);
+    $post_date = date('l: d: F: Y');
+    $post_views = 0;
+    $post_comment_count = 0;
 
-// function add_post(){
-//   global $connection;
-//   if (isset($_POST['publish'])) {
-//     $post_title = $_POST['title'];
-//     $post_author = $_POST['author'];
-//     $post_category = $_POST['category'];
-//     $post_category_id = $_POST['category_id'];
-//     $post_content = mysqli_real_escape_string($connection,$_POST['content']);
-//     $post_tags = $_POST['tags'];
-//     $post_status = $_POST['status'];
+    //getting image files from form
+    if (isset($_FILES['images'])) {
+      $location = "../images/";
+      $file = $location.basename($_FILES['images']['name']);
 
-//     $date = date("l d F Y");
-//     $post_views = 0;
-//     $post_comment_count = 0;
+      //using javascript to check if files has been uploaded successfully.
+      if (move_uploaded_file($_FILES['images']['tmp_name'],$file)) {
+        echo "<script>alert('Image_Uploaded_Successfully')</script>";
+      }else {
+        echo "<script>alert('Image_Was_Not_Uploaded_Successfully')</script>";
+      }
+    }
+    $sql = "INSERT INTO `posts`(post_title,post_category,post_category_id,post_author,post_content,post_date,post_image,post_comment_count,post_views,post_tags,post_status) VALUES('$post_title','$post_category','$post_category_id','$post_author','$post_content','$post_date','$file','$post_comment_count','$post_views','$post_tags','$post_status')";
+    $result = mysqli_query($connect,$sql);
+    if (!$result) {
+     die("Couldn't_send_data_to_database.posts_tabel".mysqli_error($connect));
+    }else {
+      header("Location: ../posts.php?rule=add_one_more");
+    }
 
-//     if (isset($_FILES['post_image'])) {
-//       $dir = "../images/";
-//       $target_file = $dir.basename($_FILES['post_image']['name']);
-//       if (move_uploaded_file($_FILES['post_image']['tmp_name'],$target_file)) {
-//         echo "Image was uploaded";
-//       }else{
-//         echo "Something went wrong while uploading image";
-//       }
-//     }
-//     $query = "INSERT INTO posts (post_title,post_author,post_category,post_category_id,post_content,post_image,post_date,post_comment_count,post_views,post_tags,post_status) VALUES('$post_title','$post_author','$post_category','$post_category_id','$post_content','$target_file','$date','$post_comment_count','$post_views','$post_tags','$post_status')";
-//     $result = mysqli_query($connection, $query);
-//     if (!$result) {
-//       die("Could not send data " . mysqli_error($connection));
-//       header("Location: ../posts.php?source=add_new");
-//     }else{
-//       header("Location: ../posts.php?source=");
-//     }
-//   }
-// }
-//   add_post();
+  }
+
+}
+insertPostData();
 
 // function show_posts(){
 //   global $connection;

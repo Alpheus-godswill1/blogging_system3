@@ -1,8 +1,8 @@
-<?php
-//  $sql = "SELECT * FROM categories";
-//  $res = mysqli_query($connection, $sql);
-
- ?>
+<?php include "db.php";?>
+<?php 
+$sql = "SELECT * FROM categories";
+$result = mysqli_query($connect,$sql);
+?>
 
 <div class="container">
 <div class="row">
@@ -19,28 +19,28 @@
       </div>
       <div class="form-group">
         <label for="">Post Category</label>
-      <select class="form-control" name="category">
+      <select class="form-control" name="categ">
         <?php
-          // while ($row = mysqli_fetch_array($res)) {
-          //   $cat_title = $row['cat_title'];
-          //   echo "<option value='$cat_title'>$cat_title</option>";
-          // }
+        while ($row = mysqli_fetch_assoc($result)) {
+         $cat_tit = $row['cat_title'];
+         echo "<option value='$cat_tit'>$cat_tit</option>";
+          }
          ?>
-
       </select>
       </div>
       <div class="form-group">
         <label for="">Post Category ID</label>
-      <select class="form-control" name="category_id">
-        <?php
-        // $sql = "SELECT * FROM categories";
-        // $res = mysqli_query($connection, $sql);
-        //   while ($row = mysqli_fetch_array($res)) {
-        //     $cat_title = $row['cat_title'];
-        //       $cat_id = $row['cat_id'];
-        //     echo "<option value='$cat_id'>$cat_id - $cat_title</option>";
-        //   }
-         ?>
+      <select class="form-control" name="categ_id">
+       <?php 
+       $sql = "SELECT * FROM categories";
+       $result = mysqli_query($connect,$sql);
+       while ($row = mysqli_fetch_assoc($result)) {
+        $cat_id = $row['cat_id'];
+        $cat_tit = $row['cat_title'];
+        echo "<option value='$cat_id'>$cat_id - $cat_tit</option>";
+       }
+       
+       ?>
       </select>
       </div>
       <div class="form-group">
@@ -49,7 +49,7 @@
       </div>
       <div class="form-group">
         <label for="">Post Tags</label>
-        <input type="text" name="tags" placeholder="Seperate tags with a comma (,)" class="form-control">
+        <input type="text" name="taggs" placeholder="Seperate tags with a comma (,)" class="form-control">
       </div>
       <div class="form-group">
         <label for="">Post Status</label>
@@ -60,10 +60,10 @@
       </div>
       <div class="form-group">
         <label for="">Post Image</label>
-        <input type="file" name="post_image"  class="form-control">
+        <input type="file" name="images"  class="form-control">
       </div>
       <div class="form-group">
-        <input type="submit" name="publish" value="Publish Post"  class="btn btn-primary">
+        <input type="submit" name="push_post" value="Publish Post"  class="btn btn-primary">
       </div>
     </form>
   </div>

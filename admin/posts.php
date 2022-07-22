@@ -32,7 +32,7 @@
 						include "./includes/view_post.php";
 						break;
 					default:
-						include "./includes/navigation.php";
+						include "./admin/index.php";
 						break;
 				}
 			}
