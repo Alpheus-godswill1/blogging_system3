@@ -144,6 +144,8 @@ insertPostData();
 function display_posts(){
   //declaring a global connection to database;
   global $connect;
+
+    //query to pull data from  the database.posts table 
   $sql = "SELECT * FROM posts";
   $result = mysqli_query($connect,$sql);
 

@@ -10,50 +10,50 @@
 
         <div class="row blog-entries element-animate">
 <?php
-  // if(isset($_GET['post'])){
-  //   $p_id = $_GET['post'];
+  if(isset($_GET['post_id'])){
+    $post_id = mysqli_real_escape_string($connect,$_GET['post_id']);
+    $post_title= mysqli_real_escape_string($connect,$_GET['post_title']);
+    $post_content = mysqli_real_escape_string($connect,$_GET['post_content']);
+    
 
-  //   $query = "SELECT * FROM posts WHERE post_id = $p_id";
-  //   $result = mysqli_query($connection, $query);
-  // }else{
-  //   header("Location: index.php");
-  // }
-
+    $query = "SELECT * FROM posts WHERE post_id LIKE '%$post_id%' OR post_title LIKE '%$post_title%' OR post_content LIKE '%$post_content%'";
+    $result = mysqli_query($connect, $query);
+  
 ?>
     <?php
 
-      // while($row = mysqli_fetch_assoc($result)){
+      while($row = mysqli_fetch_assoc($result)){
 
-      //     $post_id = $row['post_id'];
-      //     $post_title = $row['post_title'];
-      //     $post_author = $row['post_author'];
-      //     $post_category = $row['post_category'];
-      //     $post_category_id = $row['post_category_id'];
-      //     $post_content = $row['post_content'];
-      //     $post_tags = explode(',',$row['post_tags']);
-      //     $post_status = $row['post_status'];
-      //     $post_image = $row['post_image'];
-      //     $date = $row['post_date'];
-      //     $post_views = $row['post_views'];
-      //     $post_comment_count = $row['post_comment_count'];
+          $post_id = $row['post_id'];
+          $post_title = $row['post_title'];
+          $post_author = $row['post_author'];
+          $post_category = $row['post_category'];
+          $post_category_id = $row['post_category_id'];
+          $post_content = $row['post_content'];
+          $post_tags = explode(',',$row['post_tags']);
+          $post_status = $row['post_status'];
+          $post_image = $row['post_image'];
+          $date = $row['post_date'];
+          $post_views = $row['post_views'];
+          $post_comment_count = $row['post_comment_count'];
           ?>
           <div class="col-md-12 col-lg-8 main-content">
-            <img src="admin/images/<?php// echo $post_image; ?>" alt="Image" class="img-responsive mb-5" width="100%">
+            <img src="admin/images/<?php echo $post_image; ?>" alt="Image" class="img-responsive mb-5" width="100%">
              <div class="post-meta">
-                        <span class="author mr-2"><?php //echo $post_author; ?> </span>&bullet;
-                        <span class="mr-2"><?php// echo $date; ?> </span> &bullet;
-                        <span class="ml-2"><span class="fa fa-comments"></span> <?php// echo $post_comment_count; ?></span>
+                        <span class="author mr-2"><?php echo $post_author; ?> </span>&bullet;
+                        <span class="mr-2"><?php echo $date; ?> </span> &bullet;
+                        <span class="ml-2"><span class="fa fa-comments"></span> <?php echo $post_comment_count; ?></span>
                       </div>
-            <h1 class="mb-4"><?php //echo $post_title; ?></h1>
-            <a class="category mb-5" href="category.php?cat_id=<?php// echo $post_category_id; ?>"><?php// echo $post_category; ?></a>
+            <h1 class="mb-4"><?php echo $post_title; ?></h1>
+            <a class="category mb-5" href="category.php?cat_id=<?php echo $post_category_id; ?>"><?php echo $post_category; ?></a>
 
             <div class="post-content-body">
-              <p><?php// echo $post_content; ?></p>
+              <p><?php echo $post_content; ?></p>
             </div>
             <div class="pt-5">
-              <p>Categories:  <a href="#"><?php// echo $post_category; ?></a>  Tags: <a href="#" ><?php //foreach($post_tags as $tag) {
-               // echo "<a href=''class='btn btn-primary' style='margin:2px;'>#$tag</a>";
-             // }
+              <p>Categories:  <a href="#"><?php echo $post_category; ?></a>  Tags: <a href="#" ><?php foreach($post_tags as $tag) {
+                echo "<a href=''class='btn btn-primary' style='margin:2px;'>#$tag</a>";
+              }
               ?></a></p>
             </div>
 
@@ -62,7 +62,11 @@
 
 
 
-   <?php //}
+   <?php }
+}
+// else{
+//   header("Location: index.php");
+// }
 
 
 
@@ -86,9 +90,9 @@
                   </div>
                   <div class="comment-body">
                      <?php
-                      //    if(isset($_GET['post'])) {
-                      //       $id = $_GET['post'];
-                      //   $comment_obj->getApprovedComments($id);
+                        //  if(isset($_GET['post'])) {
+                        //     $id = $_GET['post'];
+                        // $comment_obj->getApprovedComments($id);
                       // }
                         ?>
                   </div>
@@ -111,7 +115,7 @@
               ?>
               <div class="comment-form-wrap pt-5">
                 <h3 class="mb-5">Leave a comment</h3>
-                <form action="single.php?post=<?php //echo $post_id; ?>" method="POST" class="p-5 bg-light">
+                <form action="single.php?post=<?php echo $post_id; ?>" method="POST" class="p-5 bg-light">
                   <div class="form-group">
                     <label for="name">Name *</label>
                     <input type="text" class="form-control" name="name" id="name">
@@ -132,7 +136,7 @@
                 </form>
 
           </div>
-</div>
+      </div>
           <!-- END main-content -->
 
             <div class="col-md-12 col-lg-4 sidebar">

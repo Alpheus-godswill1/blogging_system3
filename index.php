@@ -27,10 +27,10 @@
 
             <div class="col-md-12 col-lg-4 sidebar">
               <div class="sidebar-box search-form-wrap">
-                <form action="search.php" class="search-form" method="post">
+                <form action="./search.php" class="search-form" method="post">
                   <div class="form-group">
                     <span class="icon fa fa-search"></span>
-                    <input type="text" name="search" class="form-control" id="s" placeholder="Type a keyword...">
+                    <input type="text" name="search_submit" class="form-control" id="s" placeholder="Type a keyword...">
                   </div>
                 </form>
               </div>

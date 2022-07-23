@@ -32,7 +32,8 @@ while($row = mysqli_fetch_assoc($result)){
   ?>
      <!-- echoing out the data in this style. -->
   <div class="col-md-6">
-    <a href="single.php?post=<?php echo $post_id; ?>" class="blog-entry element-animate" data-animate-effect="fadeIn">
+    <a href="single.php?post_id=<?php echo $post_id; ?>&post_title=<?php echo $post_title;?>&post_content=<?php echo $post_content;?>&post_author=<?php echo $post_author;?>
+    " class="blog-entry element-animate" data-animate-effect="fadeIn">
       <img src="./admin/images/<?php echo $post_image;?>" alt="Image placeholder">
       <div class="blog-content-body">
         <div class="post-meta">
