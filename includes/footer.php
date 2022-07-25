@@ -61,7 +61,7 @@ if (!$result) {
 
   ?>
                       <li>
-                        <a href="">
+                        <a href="../blogging_system3/single.php?post_id=<?php echo $post_id; ?>&post_title=<?php echo $post_title;?>&post_content=<?php echo $post_content;?>">
                           <img src="./admin/images/<?php echo $post_image;?>" alt="Image placeholder" class="mr-4">
                           <div class="text">
                             <h4><?php echo $post_title;?></h4>
