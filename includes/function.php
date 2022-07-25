@@ -6,7 +6,7 @@ function display_categories(){
     global $connect;
 
     //query to delete the file gotten from the url
-    $sql = "SELECT * FROM categories ORDER BY cat_id DESC LIMIT 2 ";
+    $sql = "SELECT * FROM categories ORDER BY cat_id DESC LIMIT 4 ";
 
     //making sure the $connection is running properly
     $result = mysqli_query($connect,$sql);

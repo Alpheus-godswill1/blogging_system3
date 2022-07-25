@@ -18,7 +18,7 @@
           <div class="row blog-entries">
             <div class="col-md-12 col-lg-8 main-content">
               <div class="row">
-                <?php include 'includes/cat_posts.php'; ?>
+                <?php include './includes/cat_posts.php'; ?>
               </div>
 
             </div>
@@ -27,7 +27,7 @@
 
             <div class="col-md-12 col-lg-4 sidebar">
               <div class="sidebar-box search-form-wrap">
-                <form action="search.php" class="search-form" method="post">
+                <form action="./search.php" class="search-form" method="post">
                   <div class="form-group">
                     <span class="icon fa fa-search"></span>
                     <input type="text" name="search" class="form-control" id="s" placeholder="Type a keyword and hit enter">

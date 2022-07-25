@@ -27,7 +27,7 @@
 
             <div class="col-md-12 col-lg-4 sidebar">
               <div class="sidebar-box search-form-wrap">
-                <form action="./search.php" class="search-form" method="post">
+                <form action="./search.php" class="search-form" method="post" style="display:none">
                   <div class="form-group">
                     <span class="icon fa fa-search"></span>
                     <input type="text" name="search" class="form-control" id="s" placeholder="Type a keyword and hit enter">
