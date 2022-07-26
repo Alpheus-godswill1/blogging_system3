@@ -26,16 +26,16 @@
                               <th>Body</th>
                               <th>Status</th>
                               <th>Post ID</th>
-                              <?php //if($role === "Admin"){
-                                //echo '<th colspan="3" class="text-center">Action</th>';
-                              //} ?>
+                              <?php if($title === "Admin"){
+                                echo '<th colspan="3" class="text-center">Action</th>';
+                              } ?>
 
                             </thead>
                             <tbody>
                               <?php
-                                // require '../classes/Comment.php';
-                                // $comment_obj = new Comment($connection);
-                                // $comment_obj->getComments();
+                                 require '../classes/Comment.php';
+                                 $New_comment_call = new authorityComments($connect);
+                                 $New_comment_call->showCommentsCalls();
                               ?>
                             </tbody>
                           </table>

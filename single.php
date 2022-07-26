@@ -40,8 +40,8 @@
           <div class="col-md-12 col-lg-8 main-content">
             <img src="admin/images/<?php echo $post_image; ?>" alt="Image" class="img-responsive mb-5" width="100%">
              <div class="post-meta">
-                        <span class="author mr-2"><?php echo $post_author; ?> </span>&bullet;
-                        <span class="mr-2"><?php echo $date; ?> </span> &bullet;
+                        <span class="author mr-2"><?php echo $post_author; ?> </span>
+                        <span class="mr-2"><?php echo $date; ?> </span>
                         <span class="ml-2"><span class="fa fa-comments"></span> <?php echo $post_comment_count; ?></span>
                       </div>
             <h1 class="mb-4"><?php echo $post_title; ?></h1>
@@ -64,23 +64,20 @@
 
    <?php }
 }
-// else{
-//   header("Location: index.php");
-// }
-
-
-
-
-    ?>
+else{
+  header("Location: index.php");
+}
+?>
 
 
 
               <h3 class="mb-5">
                 <?php
-                  // (isset($_GET['post'])) ? $post_id = $_GET['post'] : $post_id = 0;
-                  // $query = mysqli_query($connection, "SELECT * FROM comments WHERE status='Approved' AND post_id=$post_id");
-                  // $num_comments = mysqli_num_rows($query);
-                  // echo $num_comments . " comment(s)";
+                   (isset($_GET['post_id']))? $post_id = mysqli_real_escape_string($connect,$_GET['post_id'])  : $post_id = 0;
+                   $sql = "SELECT * FROM `auth_comment` WHERE comment_status='approved' AND post_id=$post_id";
+                  $result = mysqli_query($connect,$sql);
+                  $num_comments = mysqli_num_rows($result);
+                  echo $num_comments . " comment(s)";
                  ?>
                </h3>
               <ul class="comment-list">
@@ -90,10 +87,13 @@
                   </div>
                   <div class="comment-body">
                      <?php
-                        //  if(isset($_GET['post'])) {
-                        //     $id = $_GET['post'];
-                        // $comment_obj->getApprovedComments($id);
-                      // }
+                         if(isset($_GET['post_id']) || isset($_GET['post_title']) || isset($_GET['post_content'])) {
+                           $post_id = $_GET['post_id'];
+                          $New_comment_call->callApprovedComments($post_id);
+                        if (!$New_comment_call) {
+                          echo "failed";
+                        }
+                      }
                         ?>
                   </div>
                 </li>
@@ -103,34 +103,38 @@
               </ul>
               <!-- END comment-list -->
               <?php
-                // if(isset($_GET['post'])) {
-                //   $id = $_GET['post'];
-                //   if(isset($_POST['comment'])) {
-                //     $name = $_POST['name'];
-                //     $email = $_POST['email'];
-                //     $body = $_POST['body'];
-                //     $comment_obj->addComments($id, $name, $email, $body);
-                //   }
-                // }
+                if(isset($_GET['post_id']) || isset($_GET['post_title']) || isset($_GET['post_content'])) {
+                  $post_id = $_GET['post_id'];
+                  if(isset($_POST['comment_submit_btn'])) {
+                    $comment_name = $_POST['comment_name'];
+                    $comment_email = $_POST['comment_email'];
+                    $comment_body = $_POST['comment_body'];
+                    $comment_status = 'Unapproved';
+                    $New_comment_call->makingComments($post_id,$comment_name, $comment_email, $comment_body,$comment_status);
+                    if (!$New_comment_call) {
+                      echo "failed";
+                    }
+                  }
+                }
               ?>
               <div class="comment-form-wrap pt-5">
                 <h3 class="mb-5">Leave a comment</h3>
-                <form action="single.php?post=<?php echo $post_id; ?>" method="POST" class="p-5 bg-light">
+                <form action="./single.php?post_id=<?php echo $post_id; ?>&post_title=<?php echo $post_title;?>&post_content=<?php echo $post_content;?>" method="POST" class="p-5 bg-light">
                   <div class="form-group">
                     <label for="name">Name *</label>
-                    <input type="text" class="form-control" name="name" id="name">
+                    <input type="text" class="form-control" name="comment_name" id="name">
                   </div>
                   <div class="form-group">
                     <label for="email">Email *</label>
-                    <input type="email" name="email" class="form-control" id="email">
+                    <input type="email" name="comment_email" class="form-control" id="email">
                   </div>
 
                   <div class="form-group">
                     <label for="message">Message</label>
-                    <textarea name="body" id="message" cols="30" rows="10" class="form-control"></textarea>
+                    <textarea name="comment_body" id="message" cols="30" rows="10" class="form-control"></textarea>
                   </div>
                   <div class="form-group">
-                    <input type="submit" value="Post Comment" name="comment" class="btn btn-primary">
+                    <input type="submit" value="Post Comment" name="comment_submit_btn" class="btn btn-primary">
                   </div>
 
                 </form>

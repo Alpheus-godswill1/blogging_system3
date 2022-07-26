@@ -1,8 +1,8 @@
 <?php session_start(); ?>
 <?php include "db.php"; ?>
 <?php include "function.php"; ?>
-<?php include "classes/Comment.php"; ?>
-<?php //$comment_obj = new Comment($connection); ?>
+<?php include "./classes/comment.php"?>
+<?php  $New_comment_call = new authorityComments($connect); ?>
 <!doctype html>
 <html lang="en">
   <head>
