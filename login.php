@@ -1,3 +1,5 @@
+<?php include "./includes/authheader.php";?>
+
 <style>
   .form {
     display: flex;

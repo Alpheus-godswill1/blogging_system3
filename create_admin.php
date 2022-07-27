@@ -1,3 +1,4 @@
+<?php include "./includes/authheader.php";?>
 <style>
   .form {
     display: flex;
@@ -15,21 +16,21 @@
   <h3>Create a new Admin</h3>
   <div class="form-group">
     <label>Username</label>
-    <input type="text" name="username" placeholder="Username" class="form-control">
+    <input type="text" name="cms_username" placeholder="Username" class="form-control">
   </div>
   <div class="form-group">
     <label>Email</label>
-    <input type="email" name="email" placeholder="E-Mail" class="form-control">
+    <input type="email" name="cms_email" placeholder="E-Mail" class="form-control">
   </div>
   <div class="form-group">
     <label>Password</label>
-    <input type="password" name="pwd" placeholder="Password" placeholder="Password" class="form-control">
+    <input type="password" name="cms_password" placeholder="Password"  class="form-control">
     Suggested Passwords:<br>
-    <i><?php //echo uniqid(); ?></i>
+    <i><?php echo uniqid(); ?></i>
     <br>
-    <i><?php //echo uniqid(); ?></i>
+    <i><?php echo uniqid(); ?></i>
   </div>
   <div class="form-group">
-    <input type="submit" name="create_submit" value="Continue" class="btn btn-primary">
+    <input type="submit" name="create_submit_btn" value="Continue" class="btn btn-primary">
   </div>
 </form>
