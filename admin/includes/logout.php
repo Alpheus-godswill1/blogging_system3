@@ -2,7 +2,5 @@
 session_start();
 session_unset();
 session_destroy();
-header("Location: ../../login.php");
-
-
+header("Location: ../../cms-admin.php?session_killed_login_again");
 ?>

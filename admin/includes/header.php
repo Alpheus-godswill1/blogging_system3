@@ -2,8 +2,7 @@
 <?php session_start(); ?>
 <?php include "db.php"; ?>
 <?php include "functions.php"; ?>
-
-<?php (isset($_SESSION['user_logged_in'])) ? $user_logged_in = $_SESSION['user_logged_in'] : header("Location: ../cms-admin.php?logged_in");
+<?php (isset($_SESSION['user_logged_in'])) ? $user_logged_in = $_SESSION['user_logged_in'] : header("Location: ../cms-admin.php?log_in_to_panel.");
 $sql =  "SELECT * FROM auth_users WHERE email='$user_logged_in'";
  $result = mysqli_query($connect, $sql);
  $row = mysqli_fetch_assoc($result);
