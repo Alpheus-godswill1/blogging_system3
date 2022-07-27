@@ -4,7 +4,7 @@
    if(isset($_POST['create_submit_btn'])) {
      $cms_username = polish($_POST['cms_username']);
     $cms_email = polish($_POST['cms_email']);
-   $cms_password = polish($_POST['cms_password']);
+   $cms_password = $_POST['cms_password'];
 
     if(empty($cms_username)) {
        array_push($error, "<p class='alert alert-danger'>Username is required</p>");
@@ -24,16 +24,13 @@
         $uniqRand = rand(1,3);
         switch ($uniqRand) {
           case 1:
-            $profile_pic = "users/profile_pics/defaults/head_1.png";
+            $profile_pic = "./admin/users/profile_pics/defaults/head_1.png";
             break;
           case 2:
-            $profile_pic = "users/profile_pics/defaults/head_2.png";
+            $profile_pic = "./admin/users/profile_pics/defaults/head_2.png";
             break;
           case 3:
-            $profile_pic = "users/profile_pics/defaults/head_3.png";
-            break;
-          default:
-            $profile_pic = "users/profile_pics/defaults/head_3.png";
+            $profile_pic = "./admin/users/profile_pics/defaults/head_3.png";
             break;
         }
         $hashed_Password = md5($cms_password);

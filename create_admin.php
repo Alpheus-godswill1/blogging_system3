@@ -10,6 +10,7 @@
   .form input {
     width: 400px;
   }
+  
 </style>
 
 <form action="includes/form_handler/create.php" method="post" role="form" class="form" autocomplete="off">

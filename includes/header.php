@@ -1,4 +1,4 @@
-<?php //session_start(); ?>
+<?php  session_start(); ?>
 <?php include "db.php"; ?>
 <?php include "function.php"; ?>
 <?php include "./classes/comment.php"?>

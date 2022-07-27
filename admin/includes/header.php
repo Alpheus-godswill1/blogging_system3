@@ -1,13 +1,15 @@
 <?php ob_start(); ?>
-<?php //session_start(); ?>
+<?php session_start(); ?>
 <?php include "db.php"; ?>
 <?php include "functions.php"; ?>
-<?php //(isset($_SESSION['userLogged'])) ? $user = $_SESSION['userLogged'] : header("Location: ../cms-admin.php");
-// $sql = mysqli_query($connection, "SELECT * FROM users WHERE email='$user'");
-// $row = mysqli_fetch_array($sql);
-// $username = $row['username'];
-// $profile = $row['profile_pic'];
-// $role = $row['role'];
+
+<?php (isset($_SESSION['user_logged_in'])) ? $user_logged_in = $_SESSION['user_logged_in'] : header("Location: ../cms-admin.php?logged_in");
+$sql =  "SELECT * FROM auth_users WHERE email='$user_logged_in'";
+ $result = mysqli_query($connect, $sql);
+ $row = mysqli_fetch_assoc($result);
+ $cms_username = $row['username'];
+ $user_profile_pic = $row['user_profile_pic'];
+ $title = $row['title'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
