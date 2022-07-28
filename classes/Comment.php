@@ -1,12 +1,20 @@
-<?php
+<?php (isset($_SESSION['user_logged_in'])) ? $user_logged_in = $_SESSION['user_logged_in'] : $user_log = 0;
+ global $user_logged_in;
+$sql =  "SELECT * FROM auth_users WHERE email='$user_logged_in'";
+ $result = mysqli_query($connect, $sql);
+ $pal = 0;
+ if ($pal === 0) {
+    while ($row = mysqli_fetch_array($result)) {
+     $cms_username = $row['username'];
+     $user_profile_pic = $row['user_profile_pic'];
+     $title = $row['title'];
+    }
+ }
 
-// (isset($_SESSION['userLogged'])) ? $user = $_SESSION['userLogged'] : $user = "user";
-// $sql = mysqli_query($connection, "SELECT * FROM users WHERE email='$user'");
-// while ($row = mysqli_fetch_array($sql)) {
-// 	$username = $row['username'];
-// 	$profile = $row['profile_pic'];
-// 	$role = $row['role'];
-// }
+?>
+
+
+<?php
 
 class authorityComments{
       private $connect;
@@ -30,6 +38,7 @@ class authorityComments{
 
 
       public function callApprovedComments($post_id){
+            global $title;
             $connt = $this->connect;
             $sql = "SELECT * FROM `auth_comment` WHERE post_id = $post_id AND comment_status='approved'";
             $result = mysqli_query($connt,$sql);
@@ -100,41 +109,3 @@ class authorityComments{
       }
       }
 ?> 
- <?php
-// 		}
-
-// 		public function getComments()
-// 		{
-// 			global $role;
-// 			$query = mysqli_query($this->con, "SELECT * FROM comments ORDER BY id DESC LIMIT 20");
-// 			$str = "";
-// 			if (mysqli_num_rows($query) > 0) {
-// 				while ($row = mysqli_fetch_array($query))
-// 			{
-// 				$id = $row['id'];
-// 				$name = $row['name'];
-// 				$body = $row['message'];
-// 				$email = $row['email'];
-// 				$status = $row['status'];
-// 				$post_id = $row['post_id'];
-// 				if($role !== "Admin"){
-// // 				$str .= "
-// 					}else {
-// 						$str .= "<tr>
-// 											<td>$id</td>
-// 											<td>$name</td>
-// 											<td>$email</td>
-// 											<td>$body</td>
-// 											<td>$status</td>
-// 											<td>$post_id</td>
-// 											<td><a href='#' class='btn btn-primary'>Approve</a></td>
-// 											<td><a href='#' class='btn btn-warning'>Unapprove</a></td>
-// 											<td><a href='#' class='btn btn-danger'>Delete</a></td>
-// 										</tr>";
-// 					}
-// 			}
-// 			}
-// 			echo $str;
-// 		}
-// }
-?>

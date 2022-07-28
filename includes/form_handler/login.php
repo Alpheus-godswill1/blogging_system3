@@ -12,12 +12,14 @@ if(isset($_POST['login_submit_button'])) {
      $db_email = $row['email'];
      $db_password = $row['user_password'];
      $profile_pic = $row['user_profile_pic'];
+     $cms_username = $row['username'];
 
     $rehash_password = md5($cms_password);
 
   if($cms_email === $db_email && $db_password === $rehash_password) {
      $_SESSION['user_logged_in'] = $cms_email;
      $_SESSION['profile_pic'] = $profile_pic;
+     $_SESSION['username'] = $cms_username;
      header("Location: ../../admin");
         }else{
     $_SESSION['log_email'] = $cms_email;

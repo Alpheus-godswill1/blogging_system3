@@ -2,13 +2,20 @@
 <?php session_start(); ?>
 <?php include "db.php"; ?>
 <?php include "functions.php"; ?>
-<?php (isset($_SESSION['user_logged_in'])) ? $user_logged_in = $_SESSION['user_logged_in'] : header("Location: ../cms-admin.php?log_in_to_panel.");
+<?php (isset($_SESSION['user_logged_in'])) ? $user_logged_in = $_SESSION['user_logged_in'] : header("Location: ../../blogging_system3/cms-admin.php?login_to_access_panel");
+global $user_logged_in;
 $sql =  "SELECT * FROM auth_users WHERE email='$user_logged_in'";
  $result = mysqli_query($connect, $sql);
- $row = mysqli_fetch_assoc($result);
- $cms_username = $row['username'];
- $user_profile_pic = $row['user_profile_pic'];
- $title = $row['title'];
+ $pal = 0;
+if ($pal === 0) {
+   while ($row = mysqli_fetch_array($result)) {
+    $cms_username = $row['username'];
+    $user_profile_pic = $row['user_profile_pic'];
+    $title = $row['title'];
+   }
+}
+
+ 
 ?>
 <!DOCTYPE html>
 <html lang="en">
