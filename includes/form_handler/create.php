@@ -1,6 +1,7 @@
 <?php
    $sql = new mysqli("Localhost","root","","content_management_system") or die("Could not connect".mysqli_error($connect));
    $error = [];
+   
    if(isset($_POST['create_submit_btn'])) {
      $cms_username = polish($_POST['cms_username']);
     $cms_email = polish($_POST['cms_email']);

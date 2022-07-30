@@ -1,8 +1,11 @@
 <?php
 //Using a ternary Operator to make sure the id gotten from the url is working properly
  (isset($_GET['cat_id'])) ? $cat_id = $_GET['cat_id'] : header("Location: ./index.php");
+//  Query used to compare the id of the category searched-for is corresponding with the post_category_id.
 $query = "SELECT * FROM posts WHERE post_category_id LIKE '%$cat_id%' ORDER BY post_id DESC";
+// Checking if the connection and the query is working properly.
 $result = mysqli_query($connect, $query);
+// checking if there're any data in the database.Table(posts).
 $resultRow = mysqli_num_rows($result);
 if( $resultRow === 0) {
  //echo these if there're no result equivalent to the search result
@@ -23,6 +26,7 @@ while($row = mysqli_fetch_assoc($result)){
   $post_comment_count = $row['post_comment_count'];
 
   ?>
+  <!-- these is the style the gotten data is presented -->
   <div class="col-md-6">
     <a href="./single.php?post_id=<?php echo $post_id; ?>&post_title=<?php echo $post_title;?>&post_content=<?php echo $post_content;?>" class="blog-entry element-animate" data-animate-effect="fadeIn">
       <img src="admin/images/<?php echo $post_image;?>" alt="Image placeholder">

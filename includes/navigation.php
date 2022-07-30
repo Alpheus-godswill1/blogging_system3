@@ -40,6 +40,7 @@
           <li class="nav-item">
             <a class="nav-link" href="category.php">category</a>
           </li>
+          <!-- This function is gotten form the admin/includes/functions.php file -->
               <?php display_categories() ?>
           <li class="nav-item">
             <a class="nav-link" href="contact.php">Contact</a>

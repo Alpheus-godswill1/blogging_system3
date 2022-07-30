@@ -15,7 +15,8 @@ $result = mysqli_query($connect,$sql);
       </div>
       <div class="form-group">
         <label for="">Post Author</label>
-        <input type="text" value="<?php echo $_SESSION['username'];?>"  name="author" placeholder="Post Author" class="form-control" disabled>
+        <!-- Session gotten from the includes/form_handler/login.php file.  -->
+        <input type="text" value="<?php echo $_SESSION['username'];?>"  name="author" placeholder="Post Author" class="form-control">
       </div>
       <div class="form-group">
         <label for="">Post Category</label>
@@ -28,21 +29,21 @@ $result = mysqli_query($connect,$sql);
          ?>
       </select>
       </div>
-      <div class="form-group">
+      <!-- <div class="form-group">
         <label for="">Post Category ID</label>
       <select class="form-control" name="categ_id">
        <?php 
-       $sql = "SELECT * FROM categories";
-       $result = mysqli_query($connect,$sql);
-       while ($row = mysqli_fetch_assoc($result)) {
-        $cat_id = $row['cat_id'];
-        $cat_tit = $row['cat_title'];
-        echo "<option value='$cat_id'>$cat_id - $cat_tit</option>";
-       }
+      //  $sql = "SELECT * FROM categories";
+      //  $result = mysqli_query($connect,$sql);
+      //  while ($row = mysqli_fetch_assoc($result)) {
+      //   $cat_id = $row['cat_id'];
+      //   $cat_tit = $row['cat_title'];
+      //   echo "<option value='$cat_id'>$cat_id - $cat_tit</option>";
+      //  }
        
        ?>
       </select>
-      </div>
+      </div> -->
       <div class="form-group">
         <label for="">Post Content</label>
         <textarea name="content" rows="8" cols="80" class="form-control"></textarea>

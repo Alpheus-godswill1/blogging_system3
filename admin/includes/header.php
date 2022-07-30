@@ -1,13 +1,26 @@
+<!--A written function that helps the page reload without well when refreshed  -->
 <?php ob_start(); ?>
+<!-- function used to start a session  -->
 <?php session_start(); ?>
+<!-- connection to the database and the server -->
 <?php include "db.php"; ?>
+<!-- The function file thats contain every function used in these project backend in the admin/includes/ path -->
 <?php include "functions.php"; ?>
+
+<!-- Declaration of a function used to keep user logged in after living page -->
 <?php (isset($_SESSION['user_logged_in'])) ? $user_logged_in = $_SESSION['user_logged_in'] : header("Location: ../../blogging_system3/cms-admin.php?login_to_access_panel");
+// declaring the global variable to allow the variable to be used outside it's edge.
 global $user_logged_in;
+
+// Query used to select data from database.table(auth_users) which is then used to be compared with the values of the session.
 $sql =  "SELECT * FROM auth_users WHERE email='$user_logged_in'";
+
+// making sure the query is function propely
  $result = mysqli_query($connect, $sql);
+ //Just using the varible to be able to make the script function.
  $pal = 0;
 if ($pal === 0) {
+    // using the while loop to ensure the data are gotten from the database.table(auth_users).
    while ($row = mysqli_fetch_array($result)) {
     $cms_username = $row['username'];
     $user_profile_pic = $row['user_profile_pic'];

@@ -26,15 +26,20 @@
                               <th>Body</th>
                               <th>Status</th>
                               <th>Post ID</th>
+                              <!-- Script to check whether the title is an 'Admin' or not, if title is an 'Admin' script will display that else it wont. -->
                               <?php if($title === "Admin"){
                                 echo '<th colspan="3" class="text-center">Action</th>';
                               } ?>
 
                             </thead>
                             <tbody>
+
                               <?php
+                                // Bringing the classes/ folder to be used in this file.
                                  require '../classes/Comment.php';
+                                //  Instantiating the classes in the comment.php file 
                                  $New_comment_call = new authorityComments($connect);
+                                //  Instantiating or calling of this function in the Comment.php file in this path classes/Comment.php
                                  $New_comment_call->showCommentsCalls();
                               ?>
                             </tbody>

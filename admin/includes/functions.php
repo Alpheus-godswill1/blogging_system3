@@ -103,7 +103,10 @@ function insertPostData(){
     $post_title = mysqli_real_escape_string($connect,$_POST['title']);
     $post_author =  mysqli_real_escape_string($connect,$_POST['author']);
     $post_category =  mysqli_real_escape_string($connect,$_POST['categ']);
-    $post_category_id =  mysqli_real_escape_string($connect,$_POST['categ_id']);
+    //get the cat_id that is = to the cat_title;
+    $query = mysqli_query($connect,"SELECT cat_id FROM categories WHERE cat_title = '$post_category'");
+     $row = mysqli_fetch_array($query);
+    $post_category_id = $row['cat_id'];
     $post_content =  mysqli_real_escape_string($connect,$_POST['content']);
     $post_tags =  mysqli_real_escape_string($connect,$_POST['taggs']);
     $post_status =  mysqli_real_escape_string($connect,$_POST['status']);

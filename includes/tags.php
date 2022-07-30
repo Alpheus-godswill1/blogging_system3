@@ -5,7 +5,6 @@ $sql = "SELECT * FROM posts ORDER BY post_id LIMIT 5";
 //making sure the query and the connection are working properly
 $result = mysqli_query($connect, $sql);
 
-
 // Making sure nothing is wrong with the $result variable
 if (!$result) {
   //ensuring if anything goes wrong with the $result variable the script should be killed.

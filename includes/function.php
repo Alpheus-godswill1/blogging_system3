@@ -1,4 +1,5 @@
 <?php
+// connection to the database
  include "db.php";
 
 function display_categories(){

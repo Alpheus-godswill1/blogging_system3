@@ -20,6 +20,7 @@
     $result = mysqli_query($connect, $query);
   
 ?>
+
     <?php
 
       while($row = mysqli_fetch_assoc($result)){
