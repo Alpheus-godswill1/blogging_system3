@@ -7,7 +7,7 @@
 <!-- The function file thats contain every function used in these project backend in the admin/includes/ path -->
 <?php include "functions.php"; ?>
 
-<!-- Declaration of a function used to keep user logged in after living page -->
+<!-- Declaration of a session used to keep user logged in after living page -->
 <?php (isset($_SESSION['user_logged_in'])) ? $user_logged_in = $_SESSION['user_logged_in'] : header("Location: ../../blogging_system3/cms-admin.php?login_to_access_panel");
 // declaring the global variable to allow the variable to be used outside it's edge.
 global $user_logged_in;

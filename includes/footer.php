@@ -38,28 +38,37 @@ if (!$result) {
   }
 }      
             ?>
-                    <?php
-$query = "SELECT * FROM posts ORDER BY post_id DESC LIMIT 4";
-$result = mysqli_query($connect, $query);
-$span = mysqli_num_rows($result);
-if (!$result) {
-  die("Couldn't_call_data_from_database.posts_table".mysqli_error($connect));
-}else {
-  while($row = mysqli_fetch_assoc($result)){
-    $post_id = $row['post_id'];
-    $post_title = $row['post_title'];
-    $post_author = $row['post_author'];
-    $post_category = $row['post_category'];
-    $post_category_id = $row['post_category_id'];
-    $post_content = $row['post_content'];
-    $post_tags = $row['post_tags'];
-    $post_status = $row['post_status'];
-    $post_image = $row['post_image'];
-    $post_date = $row['post_date'];
-    $post_views = $row['post_views'];
-    $post_comment_count = $row['post_comment_count'];
+        <?php
+        // Query used to get data from Database.Table = posts and are limited to a number of 4 which starts with a descending other.
+      $query = "SELECT * FROM posts ORDER BY post_id DESC LIMIT 4";
 
-  ?>
+      //Checking whether the connection and the query are working properly.
+      $result = mysqli_query($connect, $query);
+      //Checking how many rows are in the Database.Table = posts.
+      $span = mysqli_num_rows($result);
+
+      //Checking if everything is not working and if analysis is correct the script is suppose to be short down.
+      if (!$result) {
+        die("Couldn't_call_data_from_database.posts_table".mysqli_error($connect));
+      }else {
+
+        // This script is used to get data from database.Table = posts.
+        while($row = mysqli_fetch_assoc($result)){
+          $post_id = $row['post_id'];
+          $post_title = $row['post_title'];
+          $post_author = $row['post_author'];
+          $post_category = $row['post_category'];
+          $post_category_id = $row['post_category_id'];
+          $post_content = $row['post_content'];
+          $post_tags = $row['post_tags'];
+          $post_status = $row['post_status'];
+          $post_image = $row['post_image'];
+          $post_date = $row['post_date'];
+          $post_views = $row['post_views'];
+          $post_comment_count = $row['post_comment_count'];
+
+  ?>    
+  <!-- This is the style in which the data gotten from the database.Table = posts, is showed to the endusers. -->
                       <li>
                         <a href="../blogging_system3/single.php?post_id=<?php echo $post_id; ?>&post_title=<?php echo $post_title;?>&post_content=<?php echo $post_content;?>">
                           <img src="./admin/images/<?php echo $post_image;?>" alt="Image placeholder" class="mr-4">
@@ -81,7 +90,7 @@ if (!$result) {
                 <div class="col-md-1"></div>
                 
                 <div class="col-md-4">
-                  
+
 
                   <div class="mb-5">
                     <h3>Quick Links</h3>

@@ -1,4 +1,5 @@
 <?php
+//This is the database connection which is included in this file.
   include "db.php";
   ?>
   <?php
@@ -25,7 +26,7 @@ function  add_category(){
       $sql = "INSERT INTO `categories`(cat_title) VALUES('$cat_tit')";
       $result = mysqli_query($connect,$sql);
 
-      //Validating the script is working properly
+      //Validating  whether the script is working properly
       if(!$result){
 
         //killing script if anything goes wrong
@@ -46,10 +47,10 @@ function call_category(){
   //declaring a global variable
  global $connect;
 
- //SQL query for pulling data from database.tabel
+ //SQL query for pulling data from database.table
  $sql = "SELECT * FROM categories";
 
- //making sure query is well written an connected properly
+ //making sure query is well written and connected properly
  $result = mysqli_query($connect,$sql);
 
  //using while loops to get data from database.table
@@ -116,6 +117,7 @@ function insertPostData(){
 
     //getting image files from form
     if (isset($_FILES['images'])) {
+      //Directory where the new images are stored.
       $location = "../images/";
       $file = $location.basename($_FILES['images']['name']);
 

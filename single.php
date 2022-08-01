@@ -10,19 +10,22 @@
 
         <div class="row blog-entries element-animate">
 <?php
+//Getting data or values from the url.
   if(isset($_GET['post_id'])){
     $post_id = mysqli_real_escape_string($connect,$_GET['post_id']);
     $post_title= mysqli_real_escape_string($connect,$_GET['post_title']);
     $post_content = mysqli_real_escape_string($connect,$_GET['post_content']);
     
-
+      //Query that compare the data in the database.Table = posts to the one gotten from the the search field.
     $query = "SELECT * FROM posts WHERE post_id LIKE '%$post_id%' OR post_title LIKE '%$post_title%' OR post_content LIKE '%$post_content%'";
+
+    // Used to check when the connection  and query is working properly.
     $result = mysqli_query($connect, $query);
   
 ?>
 
     <?php
-
+  //This part of the script is used to get data from the database, if the query and connection are working properly.
       while($row = mysqli_fetch_assoc($result)){
 
           $post_id = $row['post_id'];
@@ -38,6 +41,7 @@
           $post_views = $row['post_views'];
           $post_comment_count = $row['post_comment_count'];
           ?>
+          <!-- These're the styles in which the data gotten are showed to the end users. -->
           <div class="col-md-12 col-lg-8 main-content">
             <img src="admin/images/<?php echo $post_image; ?>" alt="Image" class="img-responsive mb-5" width="100%">
              <div class="post-meta">
@@ -65,6 +69,7 @@
 
    <?php }
 }
+// Else if anything goes wrong this other condition is used.
 else{
   header("Location: index.php");
 }
@@ -74,7 +79,10 @@ else{
 
               <h3 class="mb-5">
                 <?php
+                // This is a ternary operator that is used to get data from the url title 'post_id'
                    (isset($_GET['post_id']))? $post_id = mysqli_real_escape_string($connect,$_GET['post_id'])  : $post_id = 0;
+
+                  //Query used to get the data from database.Table = auth_comment where the tables are compared with some given values.
                    $sql = "SELECT * FROM `auth_comment` WHERE comment_status='approved' AND post_id=$post_id";
                   $result = mysqli_query($connect,$sql);
                   $num_comments = mysqli_num_rows($result);
@@ -88,9 +96,12 @@ else{
                   </div>
                   <div class="comment-body">
                      <?php
+                      // This is a ternary operator that is used to get data from the url title 'post_id' and another 'post_title' and also 'post_content'.
                          if(isset($_GET['post_id']) || isset($_GET['post_title']) || isset($_GET['post_content'])) {
                            $post_id = $_GET['post_id'];
+                           //Instatiantion of a class method called callApprovedComments
                           $New_comment_call->callApprovedComments($post_id);
+                          //If the instantiated method fails this is echoed.
                         if (!$New_comment_call) {
                           echo "failed";
                         }
@@ -104,20 +115,27 @@ else{
               </ul>
               <!-- END comment-list -->
               <?php
+
+                // This is a ternary operator that is used to get data from the url title 'post_id'
                 if(isset($_GET['post_id']) || isset($_GET['post_title']) || isset($_GET['post_content'])) {
                   $post_id = $_GET['post_id'];
+
+                //When everything is set and the buttton is clicked
                   if(isset($_POST['comment_submit_btn'])) {
                     $comment_name = $_POST['comment_name'];
                     $comment_email = $_POST['comment_email'];
                     $comment_body = $_POST['comment_body'];
                     $comment_status = 'Unapproved';
+                    //Instatiantion of a class method called makingComments
                     $New_comment_call->makingComments($post_id,$comment_name, $comment_email, $comment_body,$comment_status);
+                    //If the instantiated method fails this is echoed.
                     if (!$New_comment_call) {
                       echo "failed";
                     }
                   }
                 }
               ?>
+              <!-- Style in which the gotten data is showed to users. -->
               <div class="comment-form-wrap pt-5">
                 <h3 class="mb-5">Leave a comment</h3>
                 <form action="./single.php?post_id=<?php echo $post_id; ?>&post_title=<?php echo $post_title;?>&post_content=<?php echo $post_content;?>" method="POST" class="p-5 bg-light">
