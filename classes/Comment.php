@@ -106,7 +106,7 @@ class authorityComments{
                              $comment_id = $row['comment_id'];
                              $comment_name = $row['comment_name'];
                              $comment_email = $row['comment_email'];
-                             $comment_body = $row['body'];
+                             $comment_body = substr($row['body'],0,50);
                              $comment_status = $row['comment_status'];
                              $post_id = $row['post_id'];
 
@@ -134,9 +134,9 @@ class authorityComments{
             					<td><?php echo $comment_body?></td>
             					<td><?php echo $comment_status?></td>
             					<td><?php echo $post_id?></td>
-            					<td><a href='#' class='btn btn-primary'>Approve</a></td>
-            					<td><a href='#' class='btn btn-warning'>Unapprove</a></td>
-            					<td><a href='#' class='btn btn-danger'>Delete</a></td>
+            					<td><a href='./comment.php?approve_comment=<?php echo $comment_id?>' class='btn btn-primary'>Approve</a></td>
+            					<td><a href='./comment.php?unapprove_comment=<?php echo $comment_id?>' class='btn btn-warning'>Unapprove</a></td>
+            					<td><a href='./comment.php?delete_comment=<?php echo $comment_id?>' class='btn btn-danger'>Delete</a></td>
             				      </tr>
       <?php
       }

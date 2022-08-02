@@ -149,9 +149,23 @@ insertPostData();
 function display_posts(){
   //declaring a global connection to database;
   global $connect;
+  $link_email= $_SESSION['user_logged_in'];
+  //Query used to connect or link users to their uploaded posts.
+  $sql_query_link_users =  mysqli_query($connect,"SELECT * FROM auth_users WHERE email ='$link_email'");
+  //Fetching the necessary data from the database.Table = auth_users
+  $resRows = mysqli_fetch_assoc($sql_query_link_users);
+  $lk_username = $resRows['username'];
+  $lk_title = $resRows['title'];
 
-    //query to pull data from  the database.posts table 
-  $sql = "SELECT * FROM posts";
+  //comparing the role of the user and making sure their post are shown.
+  if($lk_title === 'Admin'){
+   //query to pull data from  the database.posts table 
+   $sql = "SELECT * FROM posts";
+  }else{
+       //query to pull data from  the database.posts table 
+      $sql = "SELECT * FROM posts WHERE post_author = '$lk_username'";
+  }
+ 
   $result = mysqli_query($connect,$sql);
 
   //checking if anything goes wrong,then the script should be killed immediately
@@ -165,7 +179,7 @@ function display_posts(){
     $post_author = $row['post_author'];
     $post_category = $row['post_category'];
     $post_category_id = $row['post_category_id'];
-    $post_content = $row['post_content'];
+    $post_content = substr($row['post_content'],0,45);
     $post_tags = $row['post_tags'];
     $post_status = $row['post_status'];
     $post_image = $row['post_image'];
@@ -187,10 +201,10 @@ function display_posts(){
     echo "<td>{$post_tags}</td>";
     echo "<td>{$post_comment_count}</td>";
     echo "<td>{$post_views}</td>";
-    echo "<td><a href='posts.php?approve_post=$post_id'>Approve</a></td>";
-    echo "<td><a href='posts.php?unapprove_post=$post_id'>Unapprove</a></td>";
-    echo "<td><a href='posts.php?edit_post=$post_id'>Edit</a></td>";
-    echo "<td><a href='posts.php?delete_post=$post_id'>Delete</a></td>";
+    echo "<td><a href='posts.php?approve_post=$post_id' class='btn btn-primary'>Approve</a></td>";
+    echo "<td><a href='posts.php?unapprove_post=$post_id' class='btn btn-warning'>Unapprove</a></td>";
+    echo "<td><a href='posts.php?edit_post=$post_id' class='btn btn-success'>Edit</a></td>";
+    echo "<td><a href='posts.php?delete_post=$post_id' class='btn btn-danger'>Delete</a></td>";
     echo "</tr>";
   }
 

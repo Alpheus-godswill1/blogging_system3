@@ -1,5 +1,21 @@
 <?php include 'includes/header.php'; ?>
 
+<!-- This is where all the comment.php function is written to help the call back of the delete, approve and unapprove data. -->
+<?php include 'includes/helperfunct.php'; ?>
+<!-- These values are gotten from the classes/Comment.php   files  -->
+
+  <!-- Delete_Comment_Post() comment. -->
+  <?php if(isset($_GET['delete_post']) && $_GET['delete_post'] !== '' ){
+       $delete_id = $_GET['delete_post'];
+     //These helps ensure the Delete_Comment_Post() function is working properly which was written in the helperfunct.php .
+       if (Delete_Comment_Post('posts' ,'post_id', $delete_id)) {
+          //The directory where the page tends to after performing what it was written to do.
+          //This function is written in the helperfunct.php file
+          redirect("posts.php?rule=view_post");
+       }
+
+} ?>
+
 <div id="wrapper">
 
 	<!-- Navigation -->

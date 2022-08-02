@@ -1,5 +1,45 @@
 
-<?php include 'includes/header.php'; ?>
+<?php include './includes/header.php'; 
+//This is where the Delete_Comment_Post() and other functions where written.  
+  include './includes/helperfunct.php'; 
+  //These values are gotten from the classes/Comment.php   files 
+
+  //Delete_Comment_Post() comment.
+if (isset($_GET['delete_comment']) && $_GET['delete_comment'] !== '') {
+  $delete_id = $_GET['delete_comment'];
+  //These helps ensure the Delete_Comment_Post() function is working properly which was written in the helperfunct.php .
+  if(Delete_Comment_Post('auth_comment' ,'comment_id', $delete_id)){
+    //The directory where the page tends to after performing what it was written to do.
+    header("Location: ./comment.php?successfully_ran!");
+  }
+}
+
+    //This script is for the Approve scripts.
+
+  //These values are gotten from the classes/Comment.php   files 
+
+if (isset($_GET['approve_comment']) &&  $_GET['approve_comment'] !== '') {
+   $Approve_comment = $_GET['approve_comment'];
+   //These helps ensure the Approve_Unapprove_Data()function is working properly which was written in the helperfunct.php .
+   if (Approve_Unapprove_Data($Approve_comment)) {
+    //The directory where the page tends to after performin what it was written to do.
+    header("Location: ./comment.php?successfully_changed_value_to_Approved_or_Unapproved_as_the_case_may_be!");
+   }
+}
+
+//This script is for the Unapprove scripts
+
+  //These values are gotten from the classes/Comment.php   files 
+
+if (isset($_GET['unapprove_comment']) && $_GET['unapprove_comment'] !== '') {
+  $Unapprove_comment = $_GET['unapprove_comment'];
+   //These helps ensure the Approve_Unapprove_Data()function is working properly which was written in the helperfunct.php .
+   if (Approve_Unapprove_Data($Unapprove_comment)) {
+    //The directory where the page tends to after performin what it was written to do.
+    header("Location: ./comment.php?successfully_changed_value_to_Approved_or_Unapproved_as_the_case_may_be!");
+   }
+}
+?>
 
     <div id="wrapper">
 
