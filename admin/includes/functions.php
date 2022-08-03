@@ -201,12 +201,42 @@ function display_posts(){
     echo "<td>{$post_tags}</td>";
     echo "<td>{$post_comment_count}</td>";
     echo "<td>{$post_views}</td>";
-    echo "<td><a href='posts.php?approve_post=$post_id' class='btn btn-primary'>Approve</a></td>";
-    echo "<td><a href='posts.php?unapprove_post=$post_id' class='btn btn-warning'>Unapprove</a></td>";
+    echo "<td><a href='posts.php?approve_post=$post_id' class='btn btn-primary'>Change Success</a></td>";
     echo "<td><a href='posts.php?edit_post=$post_id' class='btn btn-success'>Edit</a></td>";
     echo "<td><a href='posts.php?delete_post=$post_id' class='btn btn-danger'>Delete</a></td>";
     echo "</tr>";
   }
 
   }
+}
+
+
+
+//Function used to the change the status in the posts Table to either draft or publish.
+
+function ModifyPosts_Status($post_id){
+  //Declaring a global connection which is in the db.php
+ global $connect;
+
+ //Query used to get post_status from the database.Table = posts and compare it with the post_id and the $post_id parameter.
+ $query_sql = mysqli_query($connect, "SELECT post_status FROM posts WHERE post_id = '$post_id'");
+ //Checking if the database.Table = posts, is empty or not.
+$resultRows = mysqli_num_rows($query_sql);
+if ($resultRows > 0) {
+    $rows = mysqli_fetch_assoc($query_sql); 
+    $post_status = $rows['post_status'];
+    //Checking the value of the status or the data in the post_status column
+    if ($post_status == 'Published' ) {
+      //Query to set value of post_status to draft, if it was initially set to published in the database.Table = posts.
+     $post_strQuery = mysqli_query($connect, "UPDATE posts SET post_status = 'Draft' WHERE post_id = '$post_id'");
+  }else{
+      //Query to set value of post_status to Published, if it was initially set to draft in the database.Table = posts.
+     $post_strQuery = mysqli_query($connect, "UPDATE posts SET post_status = 'Published' WHERE post_id = '$post_id'");
+      
+  }
+  return true;
+}else{
+  return false;
+}
+
 }

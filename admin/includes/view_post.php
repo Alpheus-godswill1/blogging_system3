@@ -12,8 +12,7 @@
     <th>Post Tags</th>
     <th>Post Comments</th>
     <th>Post Views</th>
-    <th>Approve Post</th>
-    <th>Unapprove Post</th>
+    <th>Change Status</th>
     <th>Edit</th>
     <th>Delete</th>
   </thead>

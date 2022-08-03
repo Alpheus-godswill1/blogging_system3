@@ -134,8 +134,8 @@ class authorityComments{
             					<td><?php echo $comment_body?></td>
             					<td><?php echo $comment_status?></td>
             					<td><?php echo $post_id?></td>
-            					<td><a href='./comment.php?approve_comment=<?php echo $comment_id?>' class='btn btn-primary'>Approve</a></td>
-            					<td><a href='./comment.php?unapprove_comment=<?php echo $comment_id?>' class='btn btn-warning'>Unapprove</a></td>
+            					<td><a href='./comment.php?approve_comment=<?php echo $comment_id?>' class='btn btn-success'>Change Status</a></td>
+            					
             					<td><a href='./comment.php?delete_comment=<?php echo $comment_id?>' class='btn btn-danger'>Delete</a></td>
             				      </tr>
       <?php

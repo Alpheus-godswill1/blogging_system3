@@ -13,8 +13,41 @@
           //This function is written in the helperfunct.php file
           redirect("posts.php?rule=view_post");
        }
+} 
 
-} ?>
+
+//Approve to published script.
+//This is for the posts Approve=(published) script which changes the post_status values.
+
+//These values are gotten from the admin/includes/functions.php   files .
+
+if (isset($_GET['approve_post'])  && $_GET['approve_post'] !== '') {
+	$Approve_published  = $_GET['approve_post'];
+   //These helps ensure the ModifyPosts_Status() function is working properly which was written in the admin/includes/functions.php .
+	if (ModifyPosts_Status($Approve_published)) {
+		//The directory where the page tends to after performin what it was written to do.
+		//This function is written in the helperfunct.php file
+		redirect("posts.php?rule=view_post");
+	}
+}
+
+
+
+//Unapprove to draft script.
+//This is for the posts Unapprove=(draft) script which changes the post_status values
+
+//These values are gotten from the admin/includes/functions.php   files.
+
+// if (isset($_GET['unapprove_post'])  && $_GET['unapprove_post'] !== '') {
+// 	$Unapprove_draft  = $_GET['unapprove_post'];
+//    //These helps ensure the ModifyPosts_Status() function is working properly which was written in the admin/includes/functions.php .
+// 	if (ModifyPosts_Status($Unapprove_draft)) {
+// 		//The directory where the page tends to after performin what it was written to do.
+// 		//This function is written in the helperfunct.php file
+// 		redirect("posts.php?rule=view_post");
+// 	}
+// }
+?>
 
 <div id="wrapper">
 
@@ -60,24 +93,7 @@
 
 			?>
 
-
-
-
-					<?php
-		// 				if (isset($_GET['source'])) {
-		// 						$source = $_GET['source'];
-
-		// 				switch ($source) {
-		// 					case 'add_new':
-		// 						include "includes/add_post.php";
-		// 						break;
-		// 					default:
-		// 						include "includes/view_post.php";
-		// 						break;
-		// 				}
-		// }
-					 ?>
-</div>
+			</div>
 				</div>
 
 

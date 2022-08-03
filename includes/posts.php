@@ -1,6 +1,6 @@
 <?php
 //query to get the data gotten from the database.posts table
-$sql= "SELECT * FROM posts ORDER BY post_id DESC";
+$sql= "SELECT * FROM posts WHERE post_status = 'published' ORDER BY post_id DESC";
 
 //making sure the connection is running properly
 $result = mysqli_query($connect, $sql);
