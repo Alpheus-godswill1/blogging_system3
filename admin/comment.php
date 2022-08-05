@@ -14,12 +14,12 @@ if (isset($_GET['delete_comment']) && $_GET['delete_comment'] !== '') {
   }
 }
 
-    //This script is for the Approve scripts.
+    //This script is for the changing_status to Approve or Unapprove Values.
 
   //These values are gotten from the classes/Comment.php   files 
 
-if (isset($_GET['approve_comment']) &&  $_GET['approve_comment'] !== '') {
-   $Approve_comment = $_GET['approve_comment'];
+if (isset($_GET['change_status']) &&  $_GET['change_status'] !== '') {
+   $Approve_comment = $_GET['change_status'];
    //These helps ensure the Approve_Unapprove_Data()function is working properly which was written in the helperfunct.php .
    if (Approve_Unapprove_Data($Approve_comment)) {
     //The directory where the page tends to after performin what it was written to do.
@@ -27,18 +27,6 @@ if (isset($_GET['approve_comment']) &&  $_GET['approve_comment'] !== '') {
    }
 }
 
-// //This script is for the Unapprove scripts
-
-//   //These values are gotten from the classes/Comment.php   files 
-
-// if (isset($_GET['unapprove_comment']) && $_GET['unapprove_comment'] !== '') {
-//   $Unapprove_comment = $_GET['unapprove_comment'];
-//    //These helps ensure the Approve_Unapprove_Data()function is working properly which was written in the helperfunct.php .
-//    if (Approve_Unapprove_Data($Unapprove_comment)) {
-//     //The directory where the page tends to after performin what it was written to do.
-//     header("Location: ./comment.php?successfully_changed_value_to_Approved_or_Unapproved_as_the_case_may_be!");
-//    }
-// }
 ?>
 
     <div id="wrapper">

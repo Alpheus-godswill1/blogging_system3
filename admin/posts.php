@@ -16,13 +16,13 @@
 } 
 
 
-//Approve to published script.
-//This is for the posts Approve=(published) script which changes the post_status values.
+//change_status to published or draft values.
+//This is for the posts change_status=(published or draft) script which changes the post_status values.
 
 //These values are gotten from the admin/includes/functions.php   files .
 
-if (isset($_GET['approve_post'])  && $_GET['approve_post'] !== '') {
-	$Approve_published  = $_GET['approve_post'];
+if (isset($_GET['change_status'])  && $_GET['change_status'] !== '') {
+	$Approve_published  = $_GET['change_status'];
    //These helps ensure the ModifyPosts_Status() function is working properly which was written in the admin/includes/functions.php .
 	if (ModifyPosts_Status($Approve_published)) {
 		//The directory where the page tends to after performin what it was written to do.
@@ -31,22 +31,6 @@ if (isset($_GET['approve_post'])  && $_GET['approve_post'] !== '') {
 	}
 }
 
-
-
-//Unapprove to draft script.
-//This is for the posts Unapprove=(draft) script which changes the post_status values
-
-//These values are gotten from the admin/includes/functions.php   files.
-
-// if (isset($_GET['unapprove_post'])  && $_GET['unapprove_post'] !== '') {
-// 	$Unapprove_draft  = $_GET['unapprove_post'];
-//    //These helps ensure the ModifyPosts_Status() function is working properly which was written in the admin/includes/functions.php .
-// 	if (ModifyPosts_Status($Unapprove_draft)) {
-// 		//The directory where the page tends to after performin what it was written to do.
-// 		//This function is written in the helperfunct.php file
-// 		redirect("posts.php?rule=view_post");
-// 	}
-// }
 ?>
 
 <div id="wrapper">
