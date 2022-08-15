@@ -61,7 +61,7 @@ function call_category(){
     echo "<tr>";
         echo "<td>{$cat_id}</td>";
         echo "<td>{$cat_tit}</td>";
-        echo "<td><a href='categories.php?delete_cat={$cat_id}'>Delete</a></td>";
+        echo "<td><a class='btn btn-danger' href='categories.php?delete_cat={$cat_id}'>Delete</a></td>";
     echo "</tr>";
   }
 }
