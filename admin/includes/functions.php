@@ -202,7 +202,7 @@ function display_posts(){
     echo "<td>{$post_comment_count}</td>";
     echo "<td>{$post_views}</td>";
     echo "<td><a href='posts.php?change_status=$post_id' class='btn btn-primary'>Change Success</a></td>";
-    echo "<td><a href='posts.php?rule=edit_post' class='btn btn-success'>Edit</a></td>";
+    echo "<td><a href='posts.php?rule=edit_post&edit_post=$post_id' class='btn btn-success'>Edit</a></td>";
     echo "<td><a href='posts.php?delete_post=$post_id' class='btn btn-danger'>Delete</a></td>";
     echo "</tr>";
   }
