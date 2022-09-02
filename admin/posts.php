@@ -61,6 +61,9 @@ if (isset($_GET['change_status'])  && $_GET['change_status'] !== '') {
 					case 'add_one_more':
 						include "./includes/add_post.php";
 						break;
+					case 'edit_post':
+						include "./includes/edit_post.php";
+						break;
 					case 'view_post':
 						include "./includes/view_post.php";
 						break;
