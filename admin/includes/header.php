@@ -64,5 +64,6 @@ if ($pal === 0) {
 
     <!-- Bootstrap Core JavaScript -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="node_modules/ckeditor5/build/ckeditor5-dll.js"></script>
 
 <body>
