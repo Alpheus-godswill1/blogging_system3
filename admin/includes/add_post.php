@@ -46,7 +46,7 @@ $result = mysqli_query($connect,$sql);
       </div> -->
       <div class="form-group">
         <label for="">Post Content</label>
-        <textarea name="content" rows="8" cols="80" class="form-control"></textarea>
+        <textarea name="content" rows="8" cols="80" class="form-control" id="ckeditor"></textarea>
       </div>
       <div class="form-group">
         <label for="">Post Tags</label>
@@ -71,3 +71,7 @@ $result = mysqli_query($connect,$sql);
 </div>
 
 </div>
+
+<script>
+  CKEDITOR.replace('ckeditor')
+</script>

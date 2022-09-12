@@ -2,6 +2,16 @@
 <?php 
 $sql = "SELECT * FROM categories";
 $result = mysqli_query($connect,$sql);
+
+// get posts content by id 
+if(isset($_GET['edit_post']) && $_GET['edit_post'] != "") 
+{
+  $edit_post_id = $_GET['edit_post'];
+
+}
+else {
+  die("Failed_to_get_post_id". mysqli_error($connect));
+}
 ?>
 
 <div class="container">
