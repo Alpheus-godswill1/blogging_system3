@@ -7,8 +7,22 @@ $result = mysqli_query($connect,$sql);
 if(isset($_GET['edit_post']) && $_GET['edit_post'] != "") 
 {
   $edit_post_id = $_GET['edit_post'];
+  $query = mysql_query($connect,"SELECT * FROM posts WHERE post_id = $edit_post_id");
+  $rowz = mysqli_num_rows($query);
+  if ($rowz > 0) {
+    $data = mysqli_fetch_assoc($query);
+    $title = $data['post_title'];
+    $author = $data['post_author'];
+    $category = $data['post_category'];
+    $content = $data['post_content'];
+    $tags = $data['post_title'];
+    $status = $data['post_status'];
+    $image = $data['post_'];  
+  }else {
+    die("No such record in database");
+  }
 
-}
+  }
 else {
   die("Failed_to_get_post_id". mysqli_error($connect));
 }
