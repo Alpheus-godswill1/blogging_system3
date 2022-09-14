@@ -7,7 +7,7 @@ $result = mysqli_query($connect,$sql);
 if(isset($_GET['edit_post']) && $_GET['edit_post'] != "") 
 {
   $edit_post_id = $_GET['edit_post'];
-  $query = mysql_query($connect,"SELECT * FROM posts WHERE post_id = $edit_post_id");
+  $query = mysqli_query($connect,"SELECT * FROM posts WHERE post_id = $edit_post_id");
   $rowz = mysqli_num_rows($query);
   if ($rowz > 0) {
     $data = mysqli_fetch_assoc($query);
@@ -17,7 +17,7 @@ if(isset($_GET['edit_post']) && $_GET['edit_post'] != "")
     $content = $data['post_content'];
     $tags = $data['post_title'];
     $status = $data['post_status'];
-    $image = $data['post_'];  
+    $image = $data['post_image'];  
   }else {
     die("No such record in database");
   }
@@ -35,16 +35,17 @@ else {
     <form action="includes/functions.php" method="post" enctype="multipart/form-data">
       <div class="form-group">
         <label for="">Post title</label>
-        <input type="text" name="title" placeholder="Post Title" class="form-control">
+        <input type="text" name="title" placeholder="Post Title" class="form-control" value="<?php echo $title; ?>">
       </div>
       <div class="form-group">
         <label for="">Post Author</label>
         <!-- Session gotten from the includes/form_handler/login.php file.  -->
-        <input type="text" value="<?php echo $_SESSION['username'];?>"  name="author" placeholder="Post Author" class="form-control">
+        <input type="text" value="<?php echo $_SESSION['username'];?>"  name="author" placeholder="Post Author" value="<?php echo $author; ?>" class="form-control">
       </div>
       <div class="form-group">
         <label for="">Post Category</label>
       <select class="form-control" name="categ">
+        <option value="<?php echo $category; ?>"><?php echo $category; ?></option>
         <?php
         while ($row = mysqli_fetch_assoc($result)) {
          $cat_tit = $row['cat_title'];
@@ -70,23 +71,36 @@ else {
       </div> -->
       <div class="form-group">
         <label for="">Post Content</label>
-        <textarea name="content" rows="8" cols="80" class="form-control"></textarea>
+        <textarea name="content" rows="8" cols="80" class="form-control"><?php echo $content; ?></textarea>
       </div>
       <div class="form-group">
         <label for="">Post Tags</label>
-        <input type="text" name="taggs" placeholder="Seperate tags with a comma (,)" class="form-control">
+        <input type="text" name="taggs" value="<?php echo $tags; ?>" placeholder="Seperate tags with a comma (,)" class="form-control">
       </div>
       <div class="form-group">
         <label for="">Post Status</label>
       <select class="form-control" name="status">
-        <option value="draft">Draft</option>
-        <option value="published">Published</option>
+        <?php if($status == "draft"){
+            echo "<option value='draft'>Draft</option>
+            <option value='published'>Published</option>"; 
+        }else{
+          echo "
+        <option value='published'>Published</option>
+        <option value='draft'>Draft</option>"; 
+        }
+        ?>
+       
       </select>
       </div>
       <div class="form-group">
         <label for="">Post Image</label>
         <input type="file" name="images"  class="form-control">
       </div>
+      <br>
+      <img src="./images/<?php echo $image;?>" alt="edit_pulled_image" style="width:100px; height: 100px; border-radius:100px;">
+      <br>
+      <br>
+
       <div class="form-group">
         <input type="submit" name="update_post" value="Update Post"  class="btn btn-primary">
       </div>
