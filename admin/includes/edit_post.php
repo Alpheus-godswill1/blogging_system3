@@ -32,7 +32,7 @@ else {
 <div class="row">
   <h2>Edit Post</h2>
   <div class="col-sm-12 col-lg-7">
-    <form action="includes/functions.php" method="post" enctype="multipart/form-data">
+    <form action="posts.php" method="post" enctype="multipart/form-data">
       <div class="form-group">
         <label for="">Post title</label>
         <input type="text" name="title" placeholder="Post Title" class="form-control" value="<?php echo $title; ?>">
@@ -94,10 +94,12 @@ else {
       </div>
       <div class="form-group">
         <label for="">Post Image</label>
-        <input type="file" name="images"  class="form-control">
+        <input type="file" name="post_image"  class="form-control">
       </div>
       <br>
-      <img src="./images/<?php echo $image;?>" alt="edit_pulled_image" style="width:100px; height: 100px; border-radius:100px;">
+      <input type="text" name="image" id="" value="<?php echo $image; ?>" style="display:none"><img src="./images/<?php echo $image;?>" alt="edit_pulled_image" style="width:100px; height: 100px; border-radius:100px;">
+
+      <input type="text" name="editID" id="" value="<?php echo $edit_post_id; ?>" style="display:none">
       <br>
       <br>
 

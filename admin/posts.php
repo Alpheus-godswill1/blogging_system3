@@ -32,6 +32,56 @@ if (isset($_GET['change_status'])  && $_GET['change_status'] !== '') {
 }
 
 ?>
+<?php 
+// Update or Modify Post
+if (isset($_POST['update_post'])) {
+	$editID= $_POST['editID'];
+	$title = $_POST['title'];
+	$category = $_POST['categ'];
+	$content = $_POST['content'];
+	$author = $_POST['author'];
+	$tags = $_POST['taggs'];
+	$status = $_POST['status'];
+	$img = $_POST['image'];
+	$post_image = $_FILES['post_image']['name'];
+	$image = "";
+	//Get post-category-id
+	$sql_query = mysqli_query($connect, "SELECT cat_id FROM categories WHERE cat_title = '$category'");
+	$row = mysqli_fetch_array($sql_query);
+	$post_cat_id = $row['cat_id'];
+	//Check if user is re-uploading a new image
+	if (isset($_FILES['post_image']) && $post_image != "") {
+		$location = "./images/";
+		$file_name = $_FILES['post_image']['name'];
+		$file_size = $_FILES['post_image']['size'];
+		$file_tmp_name = $_FILES['post_image']['tmp_name'];
+		$allowed_formats = ['png','jpg','jpeg','gif','pdf'];
+		$file_extension = explode('.',$file_name);
+		$file_actual_extension = strtolower(end($file_extension));
+
+		//check if image extension is allowed
+		if(!in_array($file_actual_extension, $allowed_formats)){
+			echo "<script>alert('file type not allowed')</script>";
+		}
+		else if ($file_size >= 10000000) {
+			echo "<script>alert('file is too large')</script>";
+		}else {
+			$new_image = uniqid('Alph',true) . "." . $file_actual_extension;
+			$target =  $location . basename($new_image);
+			if (move_uploaded_file($file_tmp_name, $target)) {
+				$image = $target;
+			}
+		}
+	}else {
+		$image = $img;
+	}
+	$query = mysqli_query($connect, "UPDATE posts SET post_title='$title',post_author='$author',post_category='$category',post_category_id='$category_id',post_content='$content', post_status='$status', post_tags='$tags',post_image='$image' WHERE post_id='$editID'");
+
+	if ($query) {
+		header('Location: posts.php');
+	}
+}
+?>
 
 <div id="wrapper">
 
@@ -71,6 +121,8 @@ if (isset($_GET['change_status'])  && $_GET['change_status'] !== '') {
 						include "./admin/index.php";
 						break;
 				}
+			}else {
+				include "./includes/view_post.php"; 
 			}
 			
 			
