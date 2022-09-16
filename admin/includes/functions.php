@@ -118,7 +118,7 @@ function insertPostData(){
     //getting image files from form
     if (isset($_FILES['images'])) {
       //Directory where the new images are stored.
-      $location = "../images/";
+      $location = "../imgs/";
       $file = $location.basename($_FILES['images']['name']);
 
       //using javascript to check if files has been uploaded successfully.
@@ -195,7 +195,7 @@ function display_posts(){
     echo "<td>{$post_author}</td>";
     echo "<td>{$post_category}</td>";
     echo "<td>{$post_status}</td>";
-    echo "<td><img src='images/{$post_image}' width='50px'></td>";
+    echo "<td><img src='../images/{$post_image}' width='50px'></td>";
     echo "<td>{$post_content}</td>";
     echo "<td>{$date}</td>";
     echo "<td>{$post_tags}</td>";

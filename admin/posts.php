@@ -51,7 +51,7 @@ if (isset($_POST['update_post'])) {
 	$post_cat_id = $row['cat_id'];
 	//Check if user is re-uploading a new image
 	if (isset($_FILES['post_image']) && $post_image != "") {
-		$location = "./images/";
+		$location = "./imgs/";
 		$file_name = $_FILES['post_image']['name'];
 		$file_size = $_FILES['post_image']['size'];
 		$file_tmp_name = $_FILES['post_image']['tmp_name'];
@@ -75,7 +75,7 @@ if (isset($_POST['update_post'])) {
 	}else {
 		$image = $img;
 	}
-	$query = mysqli_query($connect, "UPDATE posts SET post_title='$title',post_author='$author',post_category='$category',post_category_id='$category_id',post_content='$content', post_status='$status', post_tags='$tags',post_image='$image' WHERE post_id='$editID'");
+	$query = mysqli_query($connect, "UPDATE posts SET post_title = '$title',post_author = '$author',post_category = '$category',post_category_id = '$post_cat_id',post_content = '$content',post_status = '$status',post_tags='$tags',post_image = '$image' WHERE post_id = '$editID'");
 
 	if ($query) {
 		header('Location: posts.php');

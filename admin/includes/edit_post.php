@@ -17,7 +17,7 @@ if(isset($_GET['edit_post']) && $_GET['edit_post'] != "")
     $content = $data['post_content'];
     $tags = $data['post_title'];
     $status = $data['post_status'];
-    $image = $data['post_image'];  
+    $images = $data['post_image'];  
   }else {
     die("No such record in database");
   }
@@ -97,7 +97,7 @@ else {
         <input type="file" name="post_image"  class="form-control">
       </div>
       <br>
-      <input type="text" name="image" id="" value="<?php echo $image; ?>" style="display:none"><img src="./images/<?php echo $image;?>" alt="edit_pulled_image" style="width:100px; height: 100px; border-radius:100px;">
+      <input type="text" name="image" id="" value="<?php echo $images; ?>" style="display:none"><img src="../imgs/<?php echo $images;?>" alt="edit_pulled_image" style="width:100px; height: 100px; border-radius:100px;">
 
       <input type="text" name="editID" id="" value="<?php echo $edit_post_id; ?>" style="display:none">
       <br>
