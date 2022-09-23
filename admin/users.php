@@ -34,18 +34,18 @@
 					}
 					
 					?>
-				</div>
+</div>
 
 
-			</div>
+</div>
 
-			<!-- /.row -->
+<!-- /.row -->
 
-		</div>
-		<!-- /.container-fluid -->
+</div>
+<!-- /.container-fluid -->
 
-	</div>
-	<!-- /#page-wrapper -->
+</div>
+<!-- /#page-wrapper -->
 
 </div>
 <!-- /#wrapper -->
@@ -56,6 +56,10 @@
 <!-- Bootstrap Core JavaScript -->
 <script src="bootstrap/js/bootstrap.min.js"></script>
 
+<!----- Our ajax call --->
+<script>
+
+</script>
 </body>
 
 </html>

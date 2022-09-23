@@ -8,7 +8,7 @@ $result = mysqli_query($connect,$sql);
 <div class="row">
   <h2>Add Users</h2>
   <div class="col-sm-12 col-lg-7">
-    <form action="" method="post" enctype="multipart/form-data">
+    <form action="../admin/Validator/validate.php" method="post" enctype="multipart/form-data">
       <div class="form-group">
         <label for="">Username</label>
         <input type="text" name="user_name" placeholder="Username" class="form-control">
