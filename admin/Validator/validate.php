@@ -29,14 +29,15 @@ if (isset($_POST['submit'])) {
         $query = mysqli_query($connect, "INSERT INTO auth_users(username,email,user_password,user_profile_pic, user_active,title) VALUES('$username','$email','$Hashedpassword', '$image', 'Yes', '$role')");
     }
      global $query;
-    if ($query) {
-        $message = "<b>User Added</b>";
-        echo "<div class='$class-success btn-block'>$message</div>";
+    if (!$query) {
+        $message = "<b>Could not get user added</b>";
+        echo "<div class='$class-danger btn-block'>$message</div>";
+    }else{
+        ?>
+        <script>
+            window.location.assign("view_users.php")
+        </script>
+        <?php 
     }
 }
-
-
-
-
-
 ?>
