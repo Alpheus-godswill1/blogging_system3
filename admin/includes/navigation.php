@@ -57,10 +57,10 @@
                         <ul id="users" class="collapse">
                             <li>
 
-                                <a href="users.php">View All Users</a>
+                                <a href="users.php?rule=view_users">View All Users</a>
                             </li>
                             <li>
-                                <a href="users.php?rule=add_user">Add New Users</a>
+                                <a href="users.php">Add New Users</a>
                             </li>
 
                         </ul>
