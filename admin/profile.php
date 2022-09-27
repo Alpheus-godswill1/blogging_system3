@@ -7,6 +7,20 @@ if($data = mysqli_fetch_assoc($sqli_query));
 
 ?>
 
+<?php 
+if (isset($_POST['submit_profile'])) {
+    $username_ = $_POST['username'];
+    $email_user = $_POST['email_name'];
+
+    if(!empty($username_) && !empty($email_user)) {
+        $query = mysqli_query($connect, "UPDATE `auth_users` SET username='$username_',email='$email_user' WHERE email='$cms_email'");
+        if ($query) {
+           header('Location: profile.php?message=Updated the data in the database->auth_users table');
+        }
+    }
+}
+?>
+
 <div id="wrapper">
 
 	<!-- Navigation -->
@@ -34,14 +48,14 @@ if($data = mysqli_fetch_assoc($sqli_query));
 					</div>
 					<div class="form-group">
 						<label for="">Email</label>
-						<input type="text" name="email" placeholder="Email" class="form-control" value="<?php echo $data['email']?>" >
+						<input type="text" name="email_name" placeholder="Email" class="form-control" value="<?php echo $data['email']?>" >
 					</div>
 					<div class="form-group">
 						<label for="">Role</label>
                         <input type="text" name="role" class="form-control" value="<?php echo $data['title']?>" disabled>
 					</div>
 					<div class="form-group">
-						<input type="submit" name="submit" id="submit" value="Update your profile " class="btn btn-success btn-block" style="width:50%">
+						<input type="submit" name="submit_profile" id="submit" value="Update your profile " class="btn btn-success btn-block" style="width:50%">
 					</div>
 					</form>
 				</div>
