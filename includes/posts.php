@@ -34,7 +34,7 @@ while($row = mysqli_fetch_assoc($result)){
   <div class="col-md-6">
     <a href="single.php?post_id=<?php echo $post_id; ?>&post_title=<?php echo $post_title;?>&post_content=<?php echo $post_content;?>&post_author=<?php echo $post_author;?>
     " class="blog-entry element-animate" data-animate-effect="fadeIn">
-      <img src="../admin/imgs/<?php echo $post_image;?>" alt="Image Posts">
+      <img src="admin<?php echo $post_image;?>" alt="Image Posts">
       <div class="blog-content-body">
         <div class="post-meta">
           <span class="author mr-2"><?php echo $post_author;?></span>&bullet;

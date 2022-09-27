@@ -9,7 +9,7 @@ function show_users(){
     $pal = 0;
     if ($pal === 0) {
     // using the while loop to ensure the data are gotten from the database.table(auth_users).
-    while ($row = mysqli_fetch_array($resultQuery)) {
+    if($row = mysqli_fetch_array($resultQuery)) 
      $title = $row['title'];
      $SecondQuery = mysqli_query($connect, "SELECT * FROM auth_users ORDER BY `user_id` DESC");
      while ($data = mysqli_fetch_assoc($SecondQuery)) {
@@ -25,7 +25,7 @@ function show_users(){
                 <td>$email</td>
                 <td>$user_active</td>
                 <td>$Title</td>
-                <td><img src='../admin/users/$user_profile_pic'></td>
+                <td><img src='$user_profile_pic' style='width:50px; height:50px; border-radius:100px'></td>
                 <td><a href='?view_user_id=$user_id' style='width:70%' class='btn btn-danger btn-block'>Delete</a></td>
                 </tr>";
         }
@@ -41,6 +41,20 @@ function show_users(){
      }
     }
  }
+
+
+
+if(isset($_GET['view_user_id'])){ 
+    global $connect;
+    $delete_view_user_id = $_GET['view_user_id'];
+    $sqli_query = "DELETE FROM auth_users WHERE user_id='$delete_view_user_id'";
+    $result_query = mysqli_query($connect, $sqli_query);
+
+    if($sqli_query){
+        header('Location: view_users.php');
+    }else {
+        die("Scripts failed " . mysqli_error($connect));
+    }
 }
 
 ?>
