@@ -2,27 +2,56 @@
 <?php
 global $connect;
 $cms_email =  $_SESSION['user_logged_in'];
-if(isset($_SESSION['submit_settings'])){
+if(isset($_POST['submit_settings'])){
     $password = $_POST['confirmation_password'];
     $SQLquery = mysqli_query($connect,"SELECT user_password FROM auth_users WHERE email = '$cms_email'");
     $record = mysqli_fetch_array($SQLquery);
     $hashedPassword = md5($password);
     $password4rmDB = $record['user_password'];
     if($hashedPassword === $password4rmDB){
-        if (isset($_POST['confirmation_password'])) {
-            $password_ = $_POST['username'];
-            $email_user = $_POST['email_name'];
         
-            if(!empty($username_) && !empty($email_user)) {
-                $query = mysqli_query($connect, "UPDATE `auth_users` SET username='$username_',email='$email_user' WHERE email='$cms_email'");
-                if ($query) {
-                    $_SESSION['user'] = $email_user;
-                   header('Location: profile.php?message=Updated the data in the database->auth_users table');
+	if (isset($_FILES['Update_image']) && $_FILES['Update_image']['name'] != "") {
+		$location = "./users/profile_pics/";
+		$file_name = $_FILES['Update_image']['name'];
+		$file_tmp_name = $_FILES['Update_image']['tmp_name'];
+		$file_extension = explode('.',$file_name);
+		$file_actual_extension = strtolower(end($file_extension));
+    
+			$new_image = uniqid('Alph',true) . "." . $file_actual_extension;
+			$target =  $location . basename($new_image);
+			if (move_uploaded_file($file_tmp_name, $target)) {
+                $queryStart = mysqli_query($connect, "UPDATE auth_users SET `user_profile_pic` = '$target' WHERE email = '$cms_email'");
+                if ($queryStart) {
+                    header('Location: profile.php?Profile_image_was_successfully_updated!');
+                }else{
+                    die("Location: Oops! query did not process image" . mysqli_error($connect));
                 }
             }
-        }
-    }else{
+		}
+	}else{
         die("Password does not match". mysqli_error($connect));
+    }
+}
+
+
+
+//Update Password
+if (isset($_POST['submit_updated_password'])) {
+    $oldPassword = $_POST['old_password'];
+    $newPassword = $_POST['Update_password'];
+    
+    $query_str = mysqli_query($connect, "SELECT user_password FROM auth_users WHERE email='$cms_email'");
+    $row = mysqli_fetch_array($query_str);
+    $pwd4rmDB = $row['user_password'];
+    $Hashed_oldPassword = md5($oldPassword);
+    if ($pwd4rmDB == $Hashed_oldPassword) {
+        $Hashed_newPassword = md5($newPassword);
+        $query_written_str = mysqli_query($connect, "UPDATE auth_users SET user_password = '$Hashed_newPassword' WHERE email ='$cms_email'");
+        if ($query_written_str) {
+            header('Location: profile.php?Password_was_successfully_updated :)');
+        }
+    }else {
+        die("Sorry string was killed because password did not match!");
     }
 }
 ?>
@@ -63,14 +92,15 @@ if(isset($_SESSION['submit_settings'])){
                 <div class="col-md-6">
 				<div class="form-group">
 						<label for="">Old password</label>
-						<input type="password" name="old_password" placeholder="Old Password" class="form-control" >
+						<input type="password" name="old_password" placeholder="Old Password" class="form-control" id="oldPassword">
+                        <p id="check" style="font-size:11px"></p>
 					</div>
 					<div class="form-group">
 						<label for="">New Password</label>
-						<input type="password" name="Update_password" placeholder="New Password"  class="form-control">
+						<input type="password" name="Update_password" placeholder="New Password"  class="form-control" id="newPassword">
 					</div>
 					<div class="form-group">
-						<input type="submit" name="submit_profile" id="submit" value="Update your profile" class="btn btn-success btn-block" style="width:50%">
+						<input type="submit" name="submit_updated_password" id="submit" value="Update your profile" class="btn btn-success btn-block" style="width:50%">
 					</div>
                 </div>
 					</form>
@@ -101,7 +131,18 @@ if(isset($_SESSION['submit_settings'])){
 <!-- Bootstrap Core JavaScript -->
 <script src="bootstrap/js/bootstrap.min.js"></script>
 
+<!-- Our Ajax Call -->
+<script>
+$(document).ready(function(){
+$("#oldPassword").keyup(function(){
+let text = document.getElementById('oldPassword').value;
+$("#check").load('check.php',{
+    text:text
 
+});
+});
+});
+</script>
 </body>
 
 </html>
