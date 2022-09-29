@@ -33,7 +33,9 @@
                     <div class="col-xs-9 text-right">
 
 
-                        <div>Posts</div>
+                        <div>Posts <br>
+                        <span style="font-size:50px; color:black;font-weight:bolder"><?php echo ''. getNumPosts() .'';?></span>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -55,7 +57,9 @@
                     </div>
                     <div class="col-xs-9 text-right">
 
-                      <div>Comments</div>
+                      <div>Comments <br>
+                      <span style="font-size:50px; color:black;font-weight:bolder"><?php echo ''. getNumComments() .'';?></span>
+                      </div>
                     </div>
                 </div>
             </div>
@@ -77,11 +81,13 @@
                     </div>
                     <div class="col-xs-9 text-right">
 
-                        <div> Users</div>
+                        <div> Users <br>
+                        <span style="font-size:50px; color:black;font-weight:bolder"><?php echo ''.getNumUsers() .'';?></span>
+                    </div>
                     </div>
                 </div>
             </div>
-            <a href="users.php">
+            <a href="view_users.php">
                 <div class="panel-footer">
                     <span class="pull-left">View Details</span>
                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -99,7 +105,9 @@
                     </div>
                     <div class="col-xs-9 text-right">
 
-                         <div>Categories</div>
+                         <div>Categories <br>
+                         <span style="font-size:50px; color:black;font-weight:bolder"><?php echo ''. getNumCategories() .'';?></span>
+                        </div>
                     </div>
                 </div>
             </div>

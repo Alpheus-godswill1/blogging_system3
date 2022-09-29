@@ -6,6 +6,7 @@
 <?php include "db.php"; ?>
 <!-- The function file thats contain every function used in these project backend in the admin/includes/ path -->
 <?php include "functions.php"; ?>
+<?php include "others.php";?>
 
 <!-- Declaration of a session used to keep user logged in after living page -->
 <?php (isset($_SESSION['user_logged_in'])) ? $user_logged_in = $_SESSION['user_logged_in'] : header("Location: ../../blogging_system3/cms-admin.php?login_to_access_panel");
