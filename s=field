@@ -1,0 +1,355 @@
+[33mcommit b2a72655de8a575ee1a222565d4f6f2109ff4269[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Wed Oct 19 13:16:44 2022 +0100
+
+    added some little changes to this repository
+
+[33mcommit 8f825d74cb8e641a6972172ed3c68cb1a2f71545[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Alpheus-godswill1 <60825409+Alpheus-godswill1@users.noreply.github.com>
+Date:   Mon Oct 10 15:51:42 2022 +0100
+
+    Update README.md
+
+[33mcommit 0ec4859ea8cb47f2ec5b0b112bfab5ed10cfda57[m
+Author: Alpheus-godswill1 <60825409+Alpheus-godswill1@users.noreply.github.com>
+Date:   Mon Oct 10 15:47:40 2022 +0100
+
+    drag and drop
+    
+    full image of this project front page
+
+[33mcommit bcb2c027b02b3acbe3b0c4bbbd6c8c34ff5c302a[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Mon Oct 3 16:19:03 2022 +0100
+
+    added a new photo to the users/default/profile_pic  folder
+
+[33mcommit 5eb6bb80fda9e9292db526ecad02f10b507813e2[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Mon Oct 3 16:15:37 2022 +0100
+
+    added the README.md file to this project
+
+[33mcommit 7940265c295c40925935f79c74c4186e08954f4f[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Thu Sep 29 16:49:22 2022 +0100
+
+    It's time to document this beauty
+
+[33mcommit 152ea7758cfdb0bf4298aef749be9f6b56a92484[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Thu Sep 29 10:59:50 2022 +0100
+
+    added the functions from the others.php file to the index.php sub-sections which are the posts, categories , comments, and the users section
+
+[33mcommit fbb07a457eb2c01b8982e0f0b7df3a1659c46bf4[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Thu Sep 29 10:16:13 2022 +0100
+
+    added a new file which can be found using this directory admin/others.php, which is used to pull data from the database to the admin panel, which is for the posts, users, comments, and categories in the admin panel
+
+[33mcommit 4617528207a5c153ae2dc139ef34cf3cd1a15606[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Wed Sep 28 20:17:37 2022 +0100
+
+    added a new picture to the admin/users/   folder and also created a file in the admin/check.php directory to confirm the password changes using some cool features in ajax and Jquery
+
+[33mcommit b2ee0d7ac047818830f02b732802c3c54019b81b[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Tue Sep 27 22:50:03 2022 +0100
+
+     added this file to be able to update the profile pictures of the  users
+
+[33mcommit fe6895cb8ad6f21a7b8576cfdfc385ec67dd3208[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Tue Sep 27 19:41:42 2022 +0100
+
+    added a new file titled profile.php
+
+[33mcommit be20f41c961e520a1c2c8b32dc61306cb85a7117[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Tue Sep 27 14:13:42 2022 +0100
+
+     added some new files
+
+[33mcommit 93d3800ab338c09aaa649177e00239fc46da5594[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Tue Sep 27 12:32:11 2022 +0100
+
+    Added a new file title profile.php
+
+[33mcommit ae727ee9759db797eb6e0e6a4eb5000bc072b306[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Fri Sep 23 12:47:37 2022 +0100
+
+     worked on the admin/view_users.php to display the auth_users details to the frontend
+
+[33mcommit b92e9e7f1d5818adf9fc498f6b4d8e027fcf5698[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Fri Sep 23 12:47:22 2022 +0100
+
+     worked on the admin/view_users.php to display the auth_users details to the frontend
+
+[33mcommit 78330eabfdbba824d0dd83fb9c2f83668b4ca57f[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Fri Sep 23 05:46:34 2022 +0100
+
+     worked on the users.php file to include new users to the database
+
+[33mcommit dbcbfcf178587498596caadff83999b0d19fdb95[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Fri Sep 23 03:48:23 2022 +0100
+
+     added Validator/ folder and added a Validator/validate.php file inside the Validator/  folder, directory = admin/Validator/validate.php
+
+[33mcommit 0bb0175abe067db018f4e259fd4be0c9951eced5[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Fri Sep 23 03:32:44 2022 +0100
+
+    Included the add_users.php files and the view_users.php files
+
+[33mcommit 0e42e3789b78032ced6cd680b300218a018d423d[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Fri Sep 16 18:25:15 2022 +0100
+
+     added some new pictures to the admin/imgs/  folder and renamed the images folder to imgs folder
+
+[33mcommit ffaf1372936dd8a5f23d0da78196c7990b3118d1[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Fri Sep 16 15:58:31 2022 +0100
+
+    added a new picture to this project
+
+[33mcommit 8ce0c6d6413e634fbfd384f89ef45daa9bffd4a0[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Wed Sep 14 01:47:14 2022 +0100
+
+     still working on the edit_post.php file
+
+[33mcommit 5ac4ca5a47c5d183fb863f8c49c0f370c436a6b2[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Tue Sep 13 05:50:47 2022 +0100
+
+    still on the edit_post.php trying to $_GET[] the post from the url and use them properly
+
+[33mcommit 02e51d8bb262580f2ec0bc727b41085f150d7b06[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Mon Sep 12 17:25:10 2022 +0100
+
+    added a simple script to enable the GET variable function properly
+
+[33mcommit 1d0925944af08c7e5ed092a3c08208c0bfae4c06[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Fri Sep 9 23:46:48 2022 +0100
+
+    node_modules added to the admin panel
+
+[33mcommit d3c3c8bae4f097d6861a88cfd110b3871ef16b60[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Tue Sep 6 00:36:18 2022 +0100
+
+    added the CKEDITOR to this project for a better typing and editing experience.
+
+[33mcommit 73d8636ea8381ec1d34b7c5a2c7aeb77cbfc9e9f[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Fri Sep 2 22:42:11 2022 +0100
+
+    fixed a bug which occured during the loading of the edit_post.php
+
+[33mcommit 724a5739f57451998711d831eef70db6b938ef8c[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Fri Sep 2 22:25:32 2022 +0100
+
+    added a new file to the admin/includes/ which is edit_post.php, to help sort data properly
+
+[33mcommit 7672e5173ef8906c3d914dc0380b3b0bde1610d2[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Tue Aug 16 00:25:04 2022 +0100
+
+    added a class attribute to the categories call function
+
+[33mcommit 078d72c18bfaabdf330f3f0bf30987bcf1990b31[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Fri Aug 5 10:43:40 2022 +0100
+
+    Modified the change_status values in the functions.php in the admin/includes/ folders and modified the values in the posts.php file and the comment.php file
+
+[33mcommit d1eceb3aa2ab94ca38588cdd306406d4643b9f1a[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Wed Aug 3 22:56:27 2022 +0100
+
+    wrote the change status for both the posts and also the comment pages
+
+[33mcommit a82175b62b4821971d00a13381a7b39ada5c5293[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Tue Aug 2 23:25:12 2022 +0100
+
+    Did the call back on the delete, approve, unapprove in the helperfunct.php file
+
+[33mcommit aecb5cba2d0b1239695d4b508625a2d91067c5a8[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Mon Aug 1 13:01:49 2022 +0100
+
+    added comments to the scripts of the files in this project.
+
+[33mcommit b0344b15d3013e343e6a96847a6b7915c226a0c8[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Sat Jul 30 15:24:39 2022 +0100
+
+    added some comments, short-note so future users can  understand the project better
+
+[33mcommit e10a6579a209167948f0a493b0cd93da3988e902[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Thu Jul 28 15:52:47 2022 +0100
+
+    added some codes to make the admin panel login system work properly
+
+[33mcommit 17e27698a135d1091d1c100578aee545a9c0a8a0[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Thu Jul 28 09:52:50 2022 +0100
+
+    deleted a variable from the login.php file in the includes/form_handler/login.php  path
+
+[33mcommit 3c090ea03557d3de110871251f710f2825811f2e[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Wed Jul 27 19:05:38 2022 +0100
+
+    worked on the logout.php and the header.php file in the admin panel which are located in this path admin/includes/...
+
+[33mcommit 58d2d7c0e99aa8320a800bdf06061fa9051e15c5[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Wed Jul 27 18:55:27 2022 +0100
+
+    added the logout.php file to the admin panel
+
+[33mcommit dc521e8d4e99f4099fa011c3a11ec9c8525842bd[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Wed Jul 27 16:07:39 2022 +0100
+
+    added the authheader.php file in the includes/ folder outside the admin panel
+
+[33mcommit aef85bae105b63e6d1df4e082573e72a2743ab24[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Tue Jul 26 17:13:42 2022 +0100
+
+    added a new blog, and so a new image to was added to my working repository
+
+[33mcommit bb30a4bd9854226f9808fc04658860fec9ebf890[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Tue Jul 26 13:38:12 2022 +0100
+
+    I just wrote the comment.php and the comment.php for the frontend pages
+
+[33mcommit 7b89970c6ba52147403e96aafe27bddf532d9e84[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Mon Jul 25 15:57:36 2022 +0100
+
+    added some other script to the contact.php and the cat_posts.php files
+
+[33mcommit c606cb4b44ab6baf52aa814c1bb2700993ab3672[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Mon Jul 25 14:34:36 2022 +0100
+
+    added the single.php?post_title<?echo $post_title ......> . To the footer.php page posts
+
+[33mcommit c90b99a6f05e34bbc66268b11a6ff8d619115570[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Mon Jul 25 14:27:51 2022 +0100
+
+    removed the search bar from the single.php page using a style display : none attr
+
+[33mcommit d0b48f4eb7a7420790c3ab61c288252c5807fe26[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Mon Jul 25 14:08:34 2022 +0100
+
+    just removed the search bar from the single.php page
+
+[33mcommit 37dcf5782ba7d017c2a843e3f266b1a448cbfb77[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Mon Jul 25 13:32:19 2022 +0100
+
+    added some slashes to the search.php and the single.php pages
+
+[33mcommit 1472a61a8a4c92802b573e6fe737143d5552045b[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Sat Jul 23 17:40:53 2022 +0100
+
+    wrote scripts to enable the search buttons function, also wrote scripts to ensure the tags,sidebar,categories functioned properly
+
+[33mcommit 8582704dabd0872ece667a426adea096d0576961[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Fri Jul 22 20:57:48 2022 +0100
+
+    wrote alot of script to display data to front pages , sidebar, footer , category all ending with an extension of .php
+
+[33mcommit 314eadd1560e344a9c9d57c54f28bd14a42218b7[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Fri Jul 22 19:01:23 2022 +0100
+
+    uploaded some files from the admin dashboard to the database.posts table
+
+[33mcommit a0ca04d9f80c488f18cb16cce58002aaaf92ea4b[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Fri Jul 22 16:35:42 2022 +0100
+
+    added the include method to the posts.php file in the admin panel to ensure the program functions the way i want it to work
+
+[33mcommit e39ac5eda5cbc4cc5a12f5e1716ce1405e643af8[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Thu Jul 21 18:04:48 2022 +0100
+
+    wrote some scripts on the function.php in the includes/ folder outside the admin panel that called data from the categories.table to the navigation.php front page
+
+[33mcommit 22c500981fcf4b7397c6940ff95872efe233cc16[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Thu Jul 21 17:03:28 2022 +0100
+
+    started working on the functions.php in the adminpanel located in the includes/  folder
+
+[33mcommit 969932ede992857ed9f96619075b6ee4e8f2461a[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Thu Jul 21 11:55:30 2022 +0100
+
+    created a db.php file in the admin/includes folder, and wrote some basic script to connect to the database. I also started writing the function to insert data into the categories table in the content_management_system
+
+[33mcommit 80d9d45df73193e7dfe8d7e0179ba3f310603696[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Thu Jul 21 11:31:11 2022 +0100
+
+    debugged the echo tag on the navigation.php file that was giving the problem
+
+[33mcommit b2c0a96bf3c0001083fa3e5cb9fad0633434ca19[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Thu Jul 21 10:34:28 2022 +0100
+
+    refactored the whole website again
+
+[33mcommit d7e136ef017318b91f0add4961cfba7eee625598[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Wed Jul 20 16:38:30 2022 +0100
+
+    refactored the whole website again
+
+[33mcommit 263deccd63ed851c50d73c57a008e6bda8daec5a[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Wed Jul 20 16:38:09 2022 +0100
+
+    refactored the whole website again
+
+[33mcommit ffa854fbcfc311248ded88f3abadc01708cf2623[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Wed Jul 20 16:36:27 2022 +0100
+
+    refactored the whole website again
+
+[33mcommit 5ca59ceced8f2efaf75b8cdeaf1374ed859d91cd[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Wed Jul 20 16:24:20 2022 +0100
+
+    just refactored this template course will start in some few minutes' time
+
+[33mcommit 32c316af270ebfa27d2ab3578c3b70a54568a080[m
+Author: william Harty <harryalph9@gmail.com>
+Date:   Wed Jul 20 11:21:37 2022 +0100
+
+    just refactored this template course will start in some few minutes' time
