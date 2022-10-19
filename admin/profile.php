@@ -16,7 +16,7 @@ if (isset($_POST['submit_profile'])) {
         $query = mysqli_query($connect, "UPDATE `auth_users` SET username='$username_',email='$email_user' WHERE email='$cms_email'");
         if ($query) {
             $_SESSION['user'] = $email_user;
-           header('Location: profile.php?message=Updated the data in the database->auth_users table');
+        header('Location: profile.php?message=Updated the data in the database->auth_users table');
         }
     }
 }

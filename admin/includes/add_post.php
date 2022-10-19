@@ -23,10 +23,10 @@ $result = mysqli_query($connect,$sql);
       <select class="form-control" name="categ">
         <?php
         while ($row = mysqli_fetch_assoc($result)) {
-         $cat_tit = $row['cat_title'];
-         echo "<option value='$cat_tit'>$cat_tit</option>";
+        $cat_tit = $row['cat_title'];
+        echo "<option value='$cat_tit'>$cat_tit</option>";
           }
-         ?>
+        ?>
       </select>
       </div>
       <!-- <div class="form-group">

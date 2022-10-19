@@ -4,6 +4,7 @@
 
    //Array used for purpose of the array_push() function.
    $error = [];
+   
 
  //When everything is set and the buttton is clicked
    if(isset($_POST['create_submit_btn'])) {

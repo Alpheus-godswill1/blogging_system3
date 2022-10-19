@@ -195,7 +195,7 @@ function display_posts(){
     echo "<td>{$post_author}</td>";
     echo "<td>{$post_category}</td>";
     echo "<td>{$post_status}</td>";
-    echo "<td><img src='admin{$post_image}' width='50px'></td>";
+    echo "<td><img src='./imgs/{$post_image}' width='50px'></td>";
     echo "<td>{$post_content}</td>";
     echo "<td>{$date}</td>";
     echo "<td>{$post_tags}</td>";
