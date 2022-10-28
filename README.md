@@ -95,7 +95,7 @@ iv. It also contains the User Section
 
 # Remember We are discussing the Admin Section.
 ## Section 1 (CREATE ACCOUNT/SIGN UP PAGE, WHEN USER DON'T HAVE AN ACCOUNT WITH THIS ORGANISATION)
-1. Before entering any website as a contributor or an editor or an admin or what ever role a person plays, firstly, you must have a record, or an account with them so they can know you properly. so no random user can just publish content on an organisation website, it must go through a process.
+1. Before entering any website as a contributor or an editor or an admin or what ever role a person plays, firstly, you must have a record, or an account with them so they can know you properly. So note no random user can just publish content on an organisation website, it must go through a process.
 > There is normally a connection to the database first in any PHP built section, to ensure data communication is gotten properly.
 
 ![Creat user front page ](https://user-images.githubusercontent.com/60825409/198446564-a6145101-1d5d-493d-a796-588b5ffaa24e.png)
