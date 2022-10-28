@@ -45,3 +45,28 @@ iv. It also contains the User Section
 2. Comments Section.
 3. Users Section.
 4. Categories Section.
+
+
+### Tools needed to get this Project Up and running are:
+1. Browser, preferably - google chrome
+
+2. Xampp Control Panel
+
+3. Text Editor, prefably - Visual studio code 
+
+### Steps to get the whole process started 
+1. Open the Xampp control panel you downloaded, after installing it on local machine.
+2. click `Apache : Start`
+3. click `MySQL : Start` 
+4. Download and install Visual Studion Code 
+5. Open or better still run the visual studio code
+6. clone this repository by running `git clone https://github.com/Alpheus-godswill1/blogging_system3.git `
+
+### Extensions that eased the process using VS code text editor on this project
+1. Bracket pair Coloriser
+
+2. Emmet Live 
+
+3. Github themes
+
+4. Vs Code great icons
