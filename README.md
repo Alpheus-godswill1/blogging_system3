@@ -38,3 +38,10 @@ iv. It also contains the User Section
 ![Users_View_userPg](https://user-images.githubusercontent.com/60825409/198426709-d6b2220b-109f-4cb5-9f05-49c4767ee8cd.png)
 
 ![User_Add_newUserPg](https://user-images.githubusercontent.com/60825409/198426760-0c2c11d9-b2ba-4e39-bd43-cdf7a0786bde.png)
+
+
+### Well Under the Dashboard are 4 subsections, which I have listed above with their Images
+1. Post Section.
+2. Comments Section.
+3. Users Section.
+4. Categories Section.
