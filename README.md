@@ -58,8 +58,8 @@ iv. It also contains the User Section
 1. Open the Xampp control panel you downloaded, after installing it on local machine.
 2. click `Apache : Start`
 3. click `MySQL : Start` 
-4. Download and install Visual Studion Code 
-5. Open or better still run the visual studio code
+4. Download and install Visual Studio Code 
+5. Open or better still, run the visual studio code
 6. clone this repository by running `git clone https://github.com/Alpheus-godswill1/blogging_system3.git `
 
 ### Extensions that eased the process using VS code text editor on this project
