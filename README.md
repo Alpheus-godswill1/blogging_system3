@@ -16,8 +16,25 @@
 
 
 i. It contains a Post Section <br>
-![Dashb Post Section] 
+
 ![Dashboard_post_view_post_page](https://user-images.githubusercontent.com/60825409/198424466-51af72f0-fd6c-44e5-b415-a0a33795d721.png)
+
 ![post_view2](https://user-images.githubusercontent.com/60825409/198424569-044e3968-9b98-44c2-9067-403b03815e64.png)
+
 ![post_add_postpage](https://user-images.githubusercontent.com/60825409/198424640-51627bfc-fd8e-4718-be81-38ba1028e80e.png)
+
 ![add_postpage2](https://user-images.githubusercontent.com/60825409/198424748-4f069c7c-e894-4482-8291-4d9bf702050c.png)
+
+ii. It contains a Category Section
+
+![CategoriesPg](https://user-images.githubusercontent.com/60825409/198425796-cee247ad-5dc0-4390-bc8a-c719a7635cc5.png)
+
+iii. It contains also a Comment Section
+
+![CommentsPg](https://user-images.githubusercontent.com/60825409/198426020-b619bfbe-e1f8-4d46-baaf-fab172d6d9cc.png)
+
+iv. It also contains the User Section
+
+![Users_View_userPg](https://user-images.githubusercontent.com/60825409/198426709-d6b2220b-109f-4cb5-9f05-49c4767ee8cd.png)
+
+![User_Add_newUserPg](https://user-images.githubusercontent.com/60825409/198426760-0c2c11d9-b2ba-4e39-bd43-cdf7a0786bde.png)
