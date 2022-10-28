@@ -12,6 +12,7 @@
 
 ### How this project Admin Panel Functions
 1. It contains of Dashboard
+2. <br>
 ![Dashboard image] (https://user-images.githubusercontent.com/60825409/198423410-91013f9f-1e3f-4e6a-b698-c6ca8f0749bd.png)
 
 2. It contains a Post Section
