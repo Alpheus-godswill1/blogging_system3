@@ -9,3 +9,6 @@
 
 ### What is a Content Management System (C.M.S)
 > A content management system is a software application that allows you to create and deliver digital content. A CMS lets you easily edit your digital experiences and then publish that experience out to the web and other digital channels. According to https://business.adobe.com
+
+![Test image] (![CommentsPg](https://user-images.githubusercontent.com/60825409/198421338-d18c6c84-7cbb-48f0-82ff-0805a73985a3.png)
+)
