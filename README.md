@@ -40,14 +40,14 @@ iv. It also contains the User Section
 ![User_Add_newUserPg](https://user-images.githubusercontent.com/60825409/198426760-0c2c11d9-b2ba-4e39-bd43-cdf7a0786bde.png)
 
 
-### Well Under the Dashboard are 4 subsections, which I have listed above with their Images
+## Well Under the Dashboard are 4 subsections, which I have listed above with their Images.
 1. Post Section.
 2. Comments Section.
 3. Users Section.
 4. Categories Section.
 
 
-### Tools needed to get this Project Up and running are:
+# Tools needed to get this Project Up and running are:
 1. Browser, preferably - google chrome
  
 ![chrome](https://user-images.githubusercontent.com/60825409/198438126-a4cf1a98-97c0-475d-9ab0-3f97f4863695.jpg)
@@ -64,7 +64,7 @@ iv. It also contains the User Section
 
 ![Vs Code When Open](https://user-images.githubusercontent.com/60825409/198439496-f96e5ebf-1a22-4eb1-a7b9-9786100fb521.png)
 
-### Steps to get the whole process started 
+# Steps to get the whole process started. 
 1. Open the Xampp control panel you downloaded, after installing it on local machine.
 
 ![xampp-when Opened](https://user-images.githubusercontent.com/60825409/198439565-0ee3617d-dea8-4c43-a975-0ff506cdfd88.png)
@@ -79,7 +79,7 @@ iv. It also contains the User Section
 
 6. clone this repository by running `git clone https://github.com/Alpheus-godswill1/blogging_system3.git `
 
-### Extensions that eased the process using VS code text editor on this project
+# Extensions that eased the process using VS code text editor on this project.
 1. Bracket pair Coloriser
 
 2. Emmet Live 
@@ -87,3 +87,28 @@ iv. It also contains the User Section
 3. Github themes
 
 4. Vs Code great icons
+
+# Let's Start from the Backend to the Front End i.e from the Admin Panel to the Front display Page.
+
+* As I said earlier it contains several sections, which I listed above. 
+* So I am going to explain, how I built each section, what bugs I encountered, you will get to know the mindset behind each section and how I moved from one line of code to completion of this amazing project.
+
+# Remember We are discussing the Admin Section.
+## Section 1 (CREATE ACCOUNT/SIGN UP PAGE, WHEN USER DON'T HAVE AN ACCOUNT WITH THIS ORGANISATION)
+1. Before entering any website as a contributor or an editor or an admin or what ever role a person plays, firstly, you must have a record, or an account with them so they can know you properly. so no random user can just publish content on an organisation website, it must go through a process.
+> There is normally a connection to the database first in any PHP built section, to ensure data communication is gotten properly.
+
+![Creat user front page ](https://user-images.githubusercontent.com/60825409/198446564-a6145101-1d5d-493d-a796-588b5ffaa24e.png)
+
+![create user html page ](https://user-images.githubusercontent.com/60825409/198446790-5531bd9f-2658-4e59-bd9f-f196ff6258fc.png)
+
+![create user html page2](https://user-images.githubusercontent.com/60825409/198446982-6b6bdc62-5d95-41d7-ba32-ef446e1ca975.png)
+
+
+![create user script PHP1](https://user-images.githubusercontent.com/60825409/198447045-48522f9e-874b-430b-b2db-85550225c281.png)
+
+![create user script PHP2](https://user-images.githubusercontent.com/60825409/198447241-7a98f3d3-fcf9-4dc3-9fc0-a255246bcaed.png)
+
+![create user script PHP3](https://user-images.githubusercontent.com/60825409/198447276-6c04bc61-911e-4498-b020-f4b3b0b93842.png)
+
+
