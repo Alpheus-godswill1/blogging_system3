@@ -49,17 +49,34 @@ iv. It also contains the User Section
 
 ### Tools needed to get this Project Up and running are:
 1. Browser, preferably - google chrome
+ 
+![chrome](https://user-images.githubusercontent.com/60825409/198438126-a4cf1a98-97c0-475d-9ab0-3f97f4863695.jpg)
 
-2. Xampp Control Panel
+2. Xampp Control Panel 
+
+![xampp-control-panel](https://user-images.githubusercontent.com/60825409/198438315-4804ef52-b644-47fd-b835-5c529501cbac.jpg)
+
+![xampp-when Opened](https://user-images.githubusercontent.com/60825409/198438929-1e5375d5-4eac-47be-887e-518ec893adc6.png)
 
 3. Text Editor, prefably - Visual studio code 
 
+![Vs code](https://user-images.githubusercontent.com/60825409/198439471-0749f40d-d870-4ff9-93af-08ae0adbe7f5.jpg)
+
+![Vs Code When Open](https://user-images.githubusercontent.com/60825409/198439496-f96e5ebf-1a22-4eb1-a7b9-9786100fb521.png)
+
 ### Steps to get the whole process started 
 1. Open the Xampp control panel you downloaded, after installing it on local machine.
+
+![xampp-when Opened](https://user-images.githubusercontent.com/60825409/198439565-0ee3617d-dea8-4c43-a975-0ff506cdfd88.png)
+
 2. click `Apache : Start`
 3. click `MySQL : Start` 
+
 4. Download and install Visual Studio Code 
-5. Open or better still, run the visual studio code
+5. Open or better still, run the visual studio code 
+
+![Vs Code When Open](https://user-images.githubusercontent.com/60825409/198439676-a1322067-0252-4d64-b215-8e3c0f90b621.png)
+
 6. clone this repository by running `git clone https://github.com/Alpheus-godswill1/blogging_system3.git `
 
 ### Extensions that eased the process using VS code text editor on this project
