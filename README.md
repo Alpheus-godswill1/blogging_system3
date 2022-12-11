@@ -255,3 +255,19 @@ iv. It also contains the User Section
 
 ![Num_of_post](https://user-images.githubusercontent.com/60825409/206927937-7610f7a1-e857-4b20-ad6c-e8737989de5d.png)
 
+## SECTION 7 :
+## This section consist the profile of current user logged into the Admin Panel.
+
+![ProfilePage](https://user-images.githubusercontent.com/60825409/206928551-529a2ea4-db6e-4b28-8571-4f06e4d2cecd.png)
+
+> HTML tags and PHP scripts that allows user to update their profiles e.g headshot, name , phone numbers etc.
+
+
+![Profile1](https://user-images.githubusercontent.com/60825409/206928591-63ef1417-9b70-42f1-bb4e-99de7ad7d952.png)
+
+![Profile2](https://user-images.githubusercontent.com/60825409/206928597-378b62ca-c89a-4fd8-8f84-6c9906289df8.png)
+
+![Profile3](https://user-images.githubusercontent.com/60825409/206928608-0b2efc7a-50f3-4c3a-ae27-f367caaac8a4.png)
+
+![Profile4](https://user-images.githubusercontent.com/60825409/206928610-25c7acfa-ea94-49f3-93c9-5a65d4e4cec3.png)
+
