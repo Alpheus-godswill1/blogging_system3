@@ -120,3 +120,17 @@ iv. It also contains the User Section
 > Here can only be accessed if the user have an account created with the ORGANISATION.
 
 > This occurs by a process, data stored in the database is taken and compared to the data inserted into the field by the user to see if the data corresponds, else an error message is activated by a script.
+
+![Login Frontpage](https://user-images.githubusercontent.com/60825409/206892668-01eb7a7d-f83f-4a60-9ad7-27c35eaabe3c.png)
+
+> HTML5 / CSS3 tags below
+
+![login front page html](https://user-images.githubusercontent.com/60825409/206892719-0acb239c-75fc-43ec-a3ac-57a148092836.png)
+
+![login frontpage 2 pics](https://user-images.githubusercontent.com/60825409/206892726-16e0c4b6-340a-4dd9-a314-b3093e1ec4b3.png)
+
+> PHP script that takes data from HTML/CSS page, validates them and stores them in DB
+
+![Login script PHP1](https://user-images.githubusercontent.com/60825409/206892783-b1501c52-505f-48a0-90f0-36a4a16c83cf.png)
+
+![Login script PHP2](https://user-images.githubusercontent.com/60825409/206892790-24a18b94-fe01-4a63-8c18-cc95cd740d30.png)
