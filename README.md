@@ -136,7 +136,23 @@ iv. It also contains the User Section
 ![Login script PHP2](https://user-images.githubusercontent.com/60825409/206892790-24a18b94-fe01-4a63-8c18-cc95cd740d30.png)
 
 ## SECTION 3 :
-## How DATA was gotten to the POST SECTION in the Admin Panel :
+## How DATA is sent and gotten for the POST SECTION in the Admin Panel :
+
+> Like I said earlier there is a connection to the DB first before anything is carried out.
+
+1. Using a CRUD system.
+
+1i. Post are sent to the DB tables (post)
+
+![post_add_postpage](https://user-images.githubusercontent.com/60825409/206925597-b31cd593-d542-4bbc-b276-79f371d882c5.png)
+
+![add_postpage2](https://user-images.githubusercontent.com/60825409/206925600-31c6d64f-d932-402d-9964-927c35837661.png)
+
+> PHP script to send post to DB.
+
+![add_post](https://user-images.githubusercontent.com/60825409/206925633-e8b6db1a-82b4-4dd3-b828-b301c162a76b.png)
+
+![add_post2](https://user-images.githubusercontent.com/60825409/206925638-94f6f052-2ef3-49c2-b3ac-d8e914a0d2e6.png)
 
 ![post_Dashboard1](https://user-images.githubusercontent.com/60825409/206924889-4f2509bb-0683-4509-a525-82c29f822a1e.png)
 
