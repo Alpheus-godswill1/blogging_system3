@@ -1,5 +1,5 @@
 <div class="table-responsive">
-<table class="table table-bordered table-striped table-hover">
+<table class="table table-bordered table-striped table-hover ">
   <thead>
     <th>Post ID</th>
     <th>Post Title</th>
