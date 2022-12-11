@@ -119,4 +119,4 @@ iv. It also contains the User Section
 # Section 2 (LOGIN PAGE, WHEN USER HAVE AN ACCOUNT WITH THIS ORGANISATION):
 > Here can only be accessed if the user have an account created with the ORGANISATION.
 
-> This occurs by this process, data stored in the database is taken and compared to the data inserted into the field by the user to see if the data corresponds, else an error message is activated by a script.
+> This occurs by a process, data stored in the database is taken and compared to the data inserted into the field by the user to see if the data corresponds, else an error message is activated by a script.
