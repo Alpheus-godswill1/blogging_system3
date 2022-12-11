@@ -10,6 +10,9 @@
 ### What is a Content Management System (C.M.S)
 > A content management system is a software application that allows you to create and deliver digital content. A CMS lets you easily edit your digital experiences and then publish that experience out to the web and other digital channels. According to https://business.adobe.com
 
+### Abbreviations which will be used and their meaning :
+> DB - Database
+> CRUD (Create Read Update Delete) system
 
 ### How this project Admin Panel Functions
 1. It has a Dashboard that shows the list below <br>
@@ -98,6 +101,7 @@ iv. It also contains the User Section
 ## Section 1 (CREATE ACCOUNT/SIGN UP PAGE, WHEN USER DON'T HAVE AN ACCOUNT WITH THIS ORGANISATION)
 1. Before entering any website as a contributor or an editor or an admin or what ever role a person plays, firstly, you must have a record, or an account with them so they can know you properly. So note no random user can just publish content on an organisation website, it must go through a process.
 > There is normally a connection to the database first in any PHP built section, to ensure data communication is gotten properly.
+> The connection to the DB must be working properly before any checking and validation of the field like the password, username, email etc, is done using the script below.
 
 ![Creat user front page ](https://user-images.githubusercontent.com/60825409/198446564-a6145101-1d5d-493d-a796-588b5ffaa24e.png)
 
@@ -112,3 +116,7 @@ iv. It also contains the User Section
 
 ![create user script PHP3](https://user-images.githubusercontent.com/60825409/198447276-6c04bc61-911e-4498-b020-f4b3b0b93842.png)
 
+# Section 2 (LOGIN PAGE, WHEN USER HAVE AN ACCOUNT WITH THIS ORGANISATION):
+> Here can only be accessed if the user have an account created with the ORGANISATION.
+
+> This occurs by this process, data stored in the database is taken and compared to the data inserted into the field by the user to see if the data corresponds, else an error message is activated by a script.
