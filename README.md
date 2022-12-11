@@ -135,6 +135,7 @@ iv. It also contains the User Section
 
 ![Login script PHP2](https://user-images.githubusercontent.com/60825409/206892790-24a18b94-fe01-4a63-8c18-cc95cd740d30.png)
 
+## SECTION 3 :
 ## How DATA was gotten to the POST SECTION in the Admin Panel :
 
 ![post_Dashboard1](https://user-images.githubusercontent.com/60825409/206924889-4f2509bb-0683-4509-a525-82c29f822a1e.png)
@@ -158,3 +159,16 @@ iv. It also contains the User Section
 > For the change status feature 
 
 ![change_to_publish_or_draft](https://user-images.githubusercontent.com/60825409/206925005-bfcd67d0-f11b-463c-a08f-6b1792f16cb9.png)
+
+## SECTION 4 :
+## This section is for the category of the post displayed on the front page, but this is also stored and displayed in DB and Admin Panel, it all depends on what the user(Admin, editor, copywriter) etc, is trying to do, e.g (Tech, finance, Health, Food ) etc.
+
+![CategoriesPg](https://user-images.githubusercontent.com/60825409/206925266-56673896-4ccf-4b1c-9549-14c5649337b1.png)
+
+> This is to display category which the content creator selected :
+
+![Display_Category1](https://user-images.githubusercontent.com/60825409/206925272-72d27a89-c0e5-41cf-a4b1-4720d6f3ab1d.png)
+
+> Delete Feature: this is to delete category dynamically if the user wishes .
+
+![Delete_category1](https://user-images.githubusercontent.com/60825409/206925347-527fac61-32d9-4129-9bfd-f9e2c27ebc75.png)
