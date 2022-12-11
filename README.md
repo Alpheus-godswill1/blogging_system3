@@ -143,6 +143,8 @@ iv. It also contains the User Section
 1. Using a CRUD system.
 
 1i. Post are sent to the DB tables (post)
+![Inserting_data_to_DB](https://user-images.githubusercontent.com/60825409/206927560-34896548-1da6-4942-aa8d-fd0f6feae47b.png)
+
 
 ![post_add_postpage](https://user-images.githubusercontent.com/60825409/206925597-b31cd593-d542-4bbc-b276-79f371d882c5.png)
 
@@ -157,6 +159,12 @@ iv. It also contains the User Section
 ![post_Dashboard1](https://user-images.githubusercontent.com/60825409/206924889-4f2509bb-0683-4509-a525-82c29f822a1e.png)
 
 ![Dashboard_post_view_post_page](https://user-images.githubusercontent.com/60825409/206924893-d63fa4c6-2f05-40ee-a83f-30b64f5419a6.png)
+
+> PHP scripts to insert data to DB table (post)
+
+![Insert_post_data_funct](https://user-images.githubusercontent.com/60825409/206927661-ac989058-2d03-466b-bdc0-54147edc87a7.png)
+
+![Insert_funct_post2](https://user-images.githubusercontent.com/60825409/206927663-6d8944ac-ba6f-4a19-b2df-10fa7c0fa448.png)
 
 > For the HTML header of the Table
 
@@ -225,4 +233,25 @@ iv. It also contains the User Section
 ![Change_Status_commt1](https://user-images.githubusercontent.com/60825409/206926812-5db8322f-0163-4640-ba38-a0735812f7cb.png)
 
 ![Change_status2](https://user-images.githubusercontent.com/60825409/206926816-b83dcf09-c30f-4188-804d-c0b5025470e8.png)
+
+## SECTION 6 :
+## This section tells us how many users have been registered to each section :
+
+![Dashboard_page](https://user-images.githubusercontent.com/60825409/206927733-51db3b3f-dc43-4757-956c-8f412c137c22.png)
+
+> Number of user registered or logged-in to admin panel :
+
+![Num_of_users](https://user-images.githubusercontent.com/60825409/206927743-ab24443a-02e8-4b1c-9a1b-03151aeb1bb3.png)
+
+> Number of comments by public users from the front-end
+
+![Num_of_comments](https://user-images.githubusercontent.com/60825409/206927854-f4ab0794-dbb9-4fda-a8b9-da05f4d17d52.png)
+
+> Number of category used by content creators ( publishers, editor, copywriter , sales marketer ) etc.
+
+![Numb_of_categories](https://user-images.githubusercontent.com/60825409/206927916-9588c299-94ab-48c3-b709-55bbb63151f9.png)
+
+> Number of post on the DB table (post)
+
+![Num_of_post](https://user-images.githubusercontent.com/60825409/206927937-7610f7a1-e857-4b20-ad6c-e8737989de5d.png)
 
