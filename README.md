@@ -306,7 +306,7 @@ iv. It also contains the User Section
 
 ![Display_functio3](https://user-images.githubusercontent.com/60825409/206929165-c1f79569-1931-4f22-9a21-237ad5ffe9df.png)
 
-## SECTION 2 
+## SECTION 2 :
 ## Front End Comment Section where only approved comments from the Admin panel are displayed.
 
 ![Blog_Comment_Field](https://user-images.githubusercontent.com/60825409/206929406-7dd9d17d-f172-4d42-9955-6e4aab46edd8.png)
@@ -320,3 +320,71 @@ iv. It also contains the User Section
 ![display_commt2](https://user-images.githubusercontent.com/60825409/206929466-5513a699-0e30-4f26-9b9b-f6603114cfec.png)
 
 ![Display_commt3](https://user-images.githubusercontent.com/60825409/206929475-f0279444-400e-4542-a47f-7faa7ec08910.png)
+
+## SECTION 3 :
+
+## Single Post Display Feature totally explained.
+
+1. Post is first searched on search tab to give you the image below.
+
+![Single_Display](https://user-images.githubusercontent.com/60825409/206929673-25b046b9-346f-4895-a442-ff90d365c49d.png)
+
+2. The post or article is now clicked to singly open, and give the image below.
+
+![Single_Display2](https://user-images.githubusercontent.com/60825409/206929710-8fad8486-77ff-4e3a-8679-ac5d5e14cdc6.png)
+
+![Blog_content](https://user-images.githubusercontent.com/60825409/206929716-a4647041-e28d-4282-9639-d8f9ad57ebce.png)
+
+
+>> PHP script that makes the  blog post or article to be search using the search tab.
+
+![search_open_singly1](https://user-images.githubusercontent.com/60825409/206929792-77b1362e-f36d-4cae-9862-95b60b423bae.png)
+
+![Search_open_singly2](https://user-images.githubusercontent.com/60825409/206929796-9011becb-5d22-47c5-8cc7-9facb80e6f7c.png)
+
+>> PHP script that allows the searched post to be opened singly.
+
+![search_post_wholly](https://user-images.githubusercontent.com/60825409/206929848-cd42c5a9-ed0a-4180-9040-6136cc7b7f29.png)
+
+![search_post_wholly2](https://user-images.githubusercontent.com/60825409/206929850-7864c144-1061-4b3b-9711-9098b1f27ac9.png)
+
+![search_post_wholly3](https://user-images.githubusercontent.com/60825409/206929858-8cf7215e-aa2a-4c97-84b6-32ef9ffbb27e.png)
+
+# SECTION 4: The whole Front end of this great and amazing project put together
+
+![Cover_Blogging_System](https://user-images.githubusercontent.com/60825409/206929926-e5063f7d-990b-4c40-aeb1-9ae4175f0673.png)
+
+![Section_Lates_Post](https://user-images.githubusercontent.com/60825409/206929938-e9403f0b-77b2-424d-b7a2-444ac22bd935.png)
+
+![post](https://user-images.githubusercontent.com/60825409/206929949-d021660d-3d43-47ab-a57d-c76c33037efb.png)
+
+![Section_latest_post2](https://user-images.githubusercontent.com/60825409/206929954-fd36dba9-fc5c-4a03-bdac-24c63f1f0871.png)
+
+![Recent_Post_Section](https://user-images.githubusercontent.com/60825409/206929970-1c7ba8dd-fca8-42c8-8ebb-cd5b0098124b.png)
+
+![Blog_Comment_Field](https://user-images.githubusercontent.com/60825409/206929979-c92e7a13-a4c7-41a0-bac9-6c06b597f111.png)
+
+![BlogComment_SubmitBtn](https://user-images.githubusercontent.com/60825409/206929998-802c73e8-ff26-4242-81c2-12231ac4afee.png)
+
+![Blog_comments_Sect](https://user-images.githubusercontent.com/60825409/206929987-12594ea7-fac2-4007-a448-a50c1c5e2aa6.png)
+
+![Categories_Section](https://user-images.githubusercontent.com/60825409/206930053-617141ef-9b23-4d67-87fa-0b8abf9d6be3.png)
+
+![Display_BaseON_Cats](https://user-images.githubusercontent.com/60825409/206930025-c59b2eda-f132-4ac7-a82c-42b0444ce144.png)
+
+![Single_Display - Copy](https://user-images.githubusercontent.com/60825409/206930027-1f1bf433-30ab-45a3-9d60-0e7be6962e3d.png)
+
+![Single_Display2](https://user-images.githubusercontent.com/60825409/206930030-35620d70-33f3-464d-8b7c-1475e1391718.png)
+
+![Single_Post_Display](https://user-images.githubusercontent.com/60825409/206930035-126dfe98-a31e-4be5-99b3-e47199eaecb9.png)
+
+![Blog_content](https://user-images.githubusercontent.com/60825409/206930077-1775d4cc-aace-46fd-a77c-0bb1941a230e.png)
+
+![posts](https://user-images.githubusercontent.com/60825409/206930083-f2769162-b2b0-4b7a-a045-be7c16d866d5.png)
+
+![Footer](https://user-images.githubusercontent.com/60825409/206930110-17f48c1f-f36e-4b5d-a5d0-0f707307bafc.png)
+
+>> The whole piece in one 
+
+![Blogging_System_Fully](https://user-images.githubusercontent.com/60825409/206930128-9494225a-f419-4609-b41f-069a06cb320a.png)
+
