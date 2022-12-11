@@ -134,3 +134,5 @@ iv. It also contains the User Section
 ![Login script PHP1](https://user-images.githubusercontent.com/60825409/206892783-b1501c52-505f-48a0-90f0-36a4a16c83cf.png)
 
 ![Login script PHP2](https://user-images.githubusercontent.com/60825409/206892790-24a18b94-fe01-4a63-8c18-cc95cd740d30.png)
+
+## How DATA was gotten to the POST SECTION in the Admin Panel :
