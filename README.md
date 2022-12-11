@@ -350,7 +350,7 @@ iv. It also contains the User Section
 
 ![search_post_wholly3](https://user-images.githubusercontent.com/60825409/206929858-8cf7215e-aa2a-4c97-84b6-32ef9ffbb27e.png)
 
-# SECTION 4: The whole Front end of this great and amazing project put together
+# SECTION 4: The whole Front end of this great and amazing project put together .
 
 ![Cover_Blogging_System](https://user-images.githubusercontent.com/60825409/206929926-e5063f7d-990b-4c40-aeb1-9ae4175f0673.png)
 
@@ -384,7 +384,7 @@ iv. It also contains the User Section
 
 ![Footer](https://user-images.githubusercontent.com/60825409/206930110-17f48c1f-f36e-4b5d-a5d0-0f707307bafc.png)
 
->> The whole piece in one 
+# The whole piece in one.
 
 ![Blogging_System_Fully](https://user-images.githubusercontent.com/60825409/206930128-9494225a-f419-4609-b41f-069a06cb320a.png)
 
