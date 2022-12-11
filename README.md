@@ -305,3 +305,18 @@ iv. It also contains the User Section
 ![display_function2](https://user-images.githubusercontent.com/60825409/206929160-374722dd-ce53-4574-923e-f1fc68e82435.png)
 
 ![Display_functio3](https://user-images.githubusercontent.com/60825409/206929165-c1f79569-1931-4f22-9a21-237ad5ffe9df.png)
+
+## SECTION 2 
+## Front End Comment Section where only approved comments from the Admin panel are displayed.
+
+![Blog_Comment_Field](https://user-images.githubusercontent.com/60825409/206929406-7dd9d17d-f172-4d42-9955-6e4aab46edd8.png)
+
+![Blog_comments_Sect](https://user-images.githubusercontent.com/60825409/206929420-52ef1b71-f1ed-42ee-a03c-352fc95e8139.png)
+
+>> PHP Script that calls or fetches the approved comments from the DB.
+
+![display_comments_in_frontpage](https://user-images.githubusercontent.com/60825409/206929460-9c7d96a7-61f9-4620-921f-e4de17f595b4.png)
+
+![display_commt2](https://user-images.githubusercontent.com/60825409/206929466-5513a699-0e30-4f26-9b9b-f6603114cfec.png)
+
+![Display_commt3](https://user-images.githubusercontent.com/60825409/206929475-f0279444-400e-4542-a47f-7faa7ec08910.png)
