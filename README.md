@@ -148,7 +148,7 @@ iv. It also contains the User Section
 
 ![add_postpage2](https://user-images.githubusercontent.com/60825409/206925600-31c6d64f-d932-402d-9964-927c35837661.png)
 
-> PHP script to send post to DB.
+> HTML tags and PHP scripts for the image above to send post to DB.
 
 ![add_post](https://user-images.githubusercontent.com/60825409/206925633-e8b6db1a-82b4-4dd3-b828-b301c162a76b.png)
 
