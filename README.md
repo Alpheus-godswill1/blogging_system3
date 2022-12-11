@@ -181,6 +181,12 @@ iv. It also contains the User Section
 
 ![CategoriesPg](https://user-images.githubusercontent.com/60825409/206925266-56673896-4ccf-4b1c-9549-14c5649337b1.png)
 
+> Add new category feature (send new category to DB), below is the PHP script that allows this to occur dynamically with ease.
+
+![add_Category_functions](https://user-images.githubusercontent.com/60825409/206926303-4055f8f5-4bea-4c1e-93dc-4ed6877e9199.png)
+
+![add_cat_function2](https://user-images.githubusercontent.com/60825409/206926305-20f5bab1-ca7c-4e7c-ad3e-074c601112a8.png)
+
 > This is to display category which the content creator selected :
 
 ![Display_Category1](https://user-images.githubusercontent.com/60825409/206925272-72d27a89-c0e5-41cf-a4b1-4720d6f3ab1d.png)
@@ -188,3 +194,35 @@ iv. It also contains the User Section
 > Delete Feature: this is to delete category dynamically if the user wishes .
 
 ![Delete_category1](https://user-images.githubusercontent.com/60825409/206925347-527fac61-32d9-4129-9bfd-f9e2c27ebc75.png)
+
+## SECTION 5:
+## Below is the comment section in the Admin Panel.
+
+> UI of the comments, arranged in a tabular form, gotten from the DB.
+
+![CommentsPg](https://user-images.githubusercontent.com/60825409/206926450-e74c2462-b5af-4248-a454-b5155aadbb2b.png)
+
+> using class(OOP) to build this comment  section:
+
+![class1_authoritycommt1](https://user-images.githubusercontent.com/60825409/206926554-551c7eb3-f7be-4b3d-b652-8d447011d57f.png)
+
+![authority_commt2](https://user-images.githubusercontent.com/60825409/206926563-c53a7fab-9039-4cd4-89d3-919a69aa9082.png)
+
+![authority_commt3](https://user-images.githubusercontent.com/60825409/206926577-f4d64c0f-5489-401f-9c5c-ccf7ce34a3ef.png)
+
+> Script to check how many users of the website actually commented.
+
+![Comments1](https://user-images.githubusercontent.com/60825409/206926702-7db51067-dcfe-4613-a3ca-f7259d2485de.png)
+
+>> Script to instantiate comment class ( that is to actually call the class created for the comment section) 
+
+![comment_instantiation](https://user-images.githubusercontent.com/60825409/206926744-b0298e6a-0609-4d51-8445-d34a70f31d3f.png)
+
+![Instantiate_comment2](https://user-images.githubusercontent.com/60825409/206926765-98dfe5ae-b047-4742-a40b-7849b95e506c.png)
+
+> PHP script to change the status of the comment in DB to either 'unapproved' or 'approved' dynamically with ease .
+
+![Change_Status_commt1](https://user-images.githubusercontent.com/60825409/206926812-5db8322f-0163-4640-ba38-a0735812f7cb.png)
+
+![Change_status2](https://user-images.githubusercontent.com/60825409/206926816-b83dcf09-c30f-4188-804d-c0b5025470e8.png)
+
