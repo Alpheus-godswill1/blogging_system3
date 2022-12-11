@@ -271,3 +271,37 @@ iv. It also contains the User Section
 
 ![Profile4](https://user-images.githubusercontent.com/60825409/206928610-25c7acfa-ea94-49f3-93c9-5a65d4e4cec3.png)
 
+
+# This section is now where all data (behind the scene work)  from the DB is displayed for the public, dynamically with ease .
+
+## FRONT END (user interface display ).
+## SECTION 1
+
+![Cover_Blogging_System](https://user-images.githubusercontent.com/60825409/206928814-ed270568-1c3b-4c22-9211-5e58d3ba8959.png)
+
+![Section_Lates_Post](https://user-images.githubusercontent.com/60825409/206928849-0e84623a-88a5-49e3-b476-7894cfa7b3ab.png)
+
+![post](https://user-images.githubusercontent.com/60825409/206928860-815706e7-c8d6-4a7e-b73e-c683a3e56b16.png)
+
+![Section_latest_post2](https://user-images.githubusercontent.com/60825409/206928866-6411c519-5b09-416c-ad2d-162c02ac858e.png)
+
+![Recent_Post_Section](https://user-images.githubusercontent.com/60825409/206928876-4f9eed3f-cd5b-41b8-b220-fa9b9363fff2.png)
+
+> Display blog post (articles) based on categories.
+
+![Display_BaseON_Cats](https://user-images.githubusercontent.com/60825409/206928907-9fa324a4-a894-494c-b56a-6ee007ac996e.png)
+
+>> This feature is so amazing, I always use to wonder how it happened, I finally built it out myself, it's called single post display ( when you search a keyword on the search tab, normally a post or two appears, when a particular post is clicked it eventually opens up singly ) . It was pretty fun building out this feature.
+
+![Display_BaseON_Cats](https://user-images.githubusercontent.com/60825409/206929087-0d16346d-7d3a-463c-b456-3fd5e1d99293.png)
+
+![Single_Post_Display](https://user-images.githubusercontent.com/60825409/206929080-268c4969-23f0-4ffa-a71d-5a70ba3d1015.png)
+
+>> PHP script that gets or fetches data from DB table (post), using the CRUD system.
+
+
+![function_display_data_from_DB](https://user-images.githubusercontent.com/60825409/206929157-e4350be5-b4b2-4e1e-900d-e8bdf411c9a6.png)
+
+![display_function2](https://user-images.githubusercontent.com/60825409/206929160-374722dd-ce53-4574-923e-f1fc68e82435.png)
+
+![Display_functio3](https://user-images.githubusercontent.com/60825409/206929165-c1f79569-1931-4f22-9a21-237ad5ffe9df.png)
