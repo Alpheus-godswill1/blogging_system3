@@ -136,3 +136,25 @@ iv. It also contains the User Section
 ![Login script PHP2](https://user-images.githubusercontent.com/60825409/206892790-24a18b94-fe01-4a63-8c18-cc95cd740d30.png)
 
 ## How DATA was gotten to the POST SECTION in the Admin Panel :
+
+![post_Dashboard1](https://user-images.githubusercontent.com/60825409/206924889-4f2509bb-0683-4509-a525-82c29f822a1e.png)
+
+![Dashboard_post_view_post_page](https://user-images.githubusercontent.com/60825409/206924893-d63fa4c6-2f05-40ee-a83f-30b64f5419a6.png)
+
+> For the HTML header of the Table
+
+![Post header](https://user-images.githubusercontent.com/60825409/206924963-9cd625ec-dd65-4f62-a980-f2c73f1cf2cc.png)
+
+> For the edit button feature 
+
+![Edit_Post](https://user-images.githubusercontent.com/60825409/206924972-a9c15768-de9f-4f14-94e1-d39f25cc54b0.png)
+
+![edit_post2](https://user-images.githubusercontent.com/60825409/206924976-732d0d2b-c697-426e-8532-187eb6dca0f1.png)
+
+![edit_post3](https://user-images.githubusercontent.com/60825409/206924979-eded4269-1f2e-4e36-8f10-752ebc01a428.png)
+
+![edit_post4](https://user-images.githubusercontent.com/60825409/206924986-d63c2366-ce21-4744-9189-b2794e776217.png)
+
+> For the change status feature 
+
+![change_to_publish_or_draft](https://user-images.githubusercontent.com/60825409/206925005-bfcd67d0-f11b-463c-a08f-6b1792f16cb9.png)
