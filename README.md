@@ -12,7 +12,10 @@
 
 ### Abbreviations which will be used and their meaning :
 > DB - Database
+<br>
 > CRUD (Create Read Update Delete) system
+<br>
+> UI/UX - User Interface / User Experience
 
 ### How this project Admin Panel Functions
 1. It has a Dashboard that shows the list below <br>
