@@ -1,16 +1,16 @@
-# Blogging System : A total Content Management System (C.M.S), also contains an Admin Panel which controls the whole dynamic process of this monolithic project.
+ Blogging System: A total Content Management System (C.M.S), also contains an Admin Panel which controls the whole dynamic process of this monolithic project.
 
 ### What is a Blogging Systems
-> Are broadcast-style communications systems that enable authors to publish articles, opinions or product reviews (known as posts), which can be delivered through stand-alone websites, email, feed syndications systems and social networks. According to https://gartner.com
+> Are broadcast-style communications systems that enable authors to publish articles, opinions, or product reviews (known as posts), which can be delivered through stand-alone websites, email, feed syndication systems, and social networks. According to https://gartner.com
 
 <p style='justify-content:center'> Or</p>
 
 > Blogging refers to writing, photography, and other media that's self-published online
 
 ### What is a Content Management System (C.M.S)
-> A content management system is a software application that allows you to create and deliver digital content. A CMS lets you easily edit your digital experiences and then publish that experience out to the web and other digital channels. According to https://business.adobe.com
+> A content management system is a software application that allows you to create and deliver digital content. A CMS lets you easily edit your digital experiences and then publish that experience to the web and other digital channels. According to https://business.adobe.com
 
-### Abbreviations which will be used and their meaning :
+### Abbreviations that will be used and their meaning :
 > DB - Database
 
 <br>
@@ -40,7 +40,7 @@ ii. It contains a Category Section
 
 ![CategoriesPg](https://user-images.githubusercontent.com/60825409/198425796-cee247ad-5dc0-4390-bc8a-c719a7635cc5.png)
 
-iii. It contains also a Comment Section
+iii. It contains also a Comment in Section
 
 ![CommentsPg](https://user-images.githubusercontent.com/60825409/198426020-b619bfbe-e1f8-4d46-baaf-fab172d6d9cc.png)
 
@@ -69,19 +69,19 @@ iv. It also contains the User Section
 
 ![xampp-when Opened](https://user-images.githubusercontent.com/60825409/198438929-1e5375d5-4eac-47be-887e-518ec893adc6.png)
 
-3. Text Editor, prefably - Visual studio code 
+3. Text Editor, preferably - Visual studio code 
 
 ![Vs code](https://user-images.githubusercontent.com/60825409/198439471-0749f40d-d870-4ff9-93af-08ae0adbe7f5.jpg)
 
 ![Vs Code When Open](https://user-images.githubusercontent.com/60825409/198439496-f96e5ebf-1a22-4eb1-a7b9-9786100fb521.png)
 
 # Steps to get the whole process started. 
-1. Open the Xampp control panel you downloaded, after installing it on local machine.
+1. Open the Xampp control panel you downloaded, after installing it on the local machine.
 
 ![xampp-when Opened](https://user-images.githubusercontent.com/60825409/198439565-0ee3617d-dea8-4c43-a975-0ff506cdfd88.png)
 
-2. click `Apache : Start`
-3. click `MySQL : Start` 
+2. click `Apache: Start`
+3. click `MySQL: Start` 
 
 4. Download and install Visual Studio Code 
 5. Open or better still, run the visual studio code 
@@ -102,13 +102,13 @@ iv. It also contains the User Section
 # Let's Start from the Backend to the Front End i.e from the Admin Panel to the Front display Page.
 
 * As I said earlier it contains several sections, which I listed above. 
-* So I am going to explain, how I built each section, what bugs I encountered, you will get to know the mindset behind each section and how I moved from one line of code to completion of this amazing project.
+* So I am going to explain, how I built each section, and what bugs I encountered, you will get to know the mindset behind each section and how I moved from one line of code to the completion of this amazing project.
 
 # Remember We are discussing the Admin Section.
 ## Section 1 (CREATE ACCOUNT/SIGN UP PAGE, WHEN USER DON'T HAVE AN ACCOUNT WITH THIS ORGANISATION)
-1. Before entering any website as a contributor or an editor or an admin or what ever role a person plays, firstly, you must have a record, or an account with them so they can know you properly. So note no random user can just publish content on an organisation website, it must go through a process.
-> There is normally a connection to the database first in any PHP built section, to ensure data communication is gotten properly.
-> The connection to the DB must be working properly before any checking and validation of the field like the password, username, email etc, is done using the script below.
+1. Before entering any website as a contributor an editor or an admin or whatever role a person plays, firstly, you must have a record, or an account with them so they can know you properly. So note no random user can just publish content on an organization's website, it must go through a process.
+> There is normally a connection to the database first in any PHP-built section, to ensure data communication is gotten properly.
+> The connection to the DB must be working properly before any checking and validation of the field like the password, username, email, etc, is done using the script below.
 
 ![Creat user front page ](https://user-images.githubusercontent.com/60825409/198446564-a6145101-1d5d-493d-a796-588b5ffaa24e.png)
 
@@ -124,9 +124,9 @@ iv. It also contains the User Section
 ![create user script PHP3](https://user-images.githubusercontent.com/60825409/198447276-6c04bc61-911e-4498-b020-f4b3b0b93842.png)
 
 # Section 2 (LOGIN PAGE, WHEN USER HAVE AN ACCOUNT WITH THIS ORGANISATION):
-> Here can only be accessed if the user have an account created with the ORGANISATION.
+> Here can only be accessed if the user has an account created with the ORGANISATION.
 
-> This occurs by a process, data stored in the database is taken and compared to the data inserted into the field by the user to see if the data corresponds, else an error message is activated by a script.
+> This occurs by a process, data stored in the database is taken and compared to the data inserted into the field by the user to see if the data corresponds, or else an error message is activated by a script.
 
 ![Login Frontpage](https://user-images.githubusercontent.com/60825409/206892668-01eb7a7d-f83f-4a60-9ad7-27c35eaabe3c.png)
 
@@ -136,7 +136,7 @@ iv. It also contains the User Section
 
 ![login frontpage 2 pics](https://user-images.githubusercontent.com/60825409/206892726-16e0c4b6-340a-4dd9-a314-b3093e1ec4b3.png)
 
-> PHP script that takes data from HTML/CSS page, validates them and stores them in DB
+> PHP script that takes data from HTML/CSS page, validates them, and stores them in DB
 
 ![Login script PHP1](https://user-images.githubusercontent.com/60825409/206892783-b1501c52-505f-48a0-90f0-36a4a16c83cf.png)
 
@@ -149,7 +149,7 @@ iv. It also contains the User Section
 
 1. Using a CRUD system.
 
-1i. Post are sent to the DB tables (post)
+1i. Post is sent to the DB tables (post)
 ![Inserting_data_to_DB](https://user-images.githubusercontent.com/60825409/206927560-34896548-1da6-4942-aa8d-fd0f6feae47b.png)
 
 
@@ -192,7 +192,7 @@ iv. It also contains the User Section
 ![change_to_publish_or_draft](https://user-images.githubusercontent.com/60825409/206925005-bfcd67d0-f11b-463c-a08f-6b1792f16cb9.png)
 
 ## SECTION 4 :
-## This section is for the category of the post displayed on the front page, but this is also stored and displayed in DB and Admin Panel, it all depends on what the user(Admin, editor, copywriter) etc, is trying to do, e.g (Tech, finance, Health, Food ) etc.
+## This section is for the category of the post displayed on the front page, but this is also stored and displayed in DB and Admin Panel, it all depends on what the user(Admin, editor, copywriter), etc, is trying to do, e.g (Tech, Finance, Health, Food ), etc.
 
 ![CategoriesPg](https://user-images.githubusercontent.com/60825409/206925266-56673896-4ccf-4b1c-9549-14c5649337b1.png)
 
@@ -202,11 +202,11 @@ iv. It also contains the User Section
 
 ![add_cat_function2](https://user-images.githubusercontent.com/60825409/206926305-20f5bab1-ca7c-4e7c-ad3e-074c601112a8.png)
 
-> This is to display category which the content creator selected :
+> This is to display the category that the content creator selected :
 
 ![Display_Category1](https://user-images.githubusercontent.com/60825409/206925272-72d27a89-c0e5-41cf-a4b1-4720d6f3ab1d.png)
 
-> Delete Feature: this is to delete category dynamically if the user wishes .
+> Delete Feature: this is to delete the category dynamically if the user wishes.
 
 ![Delete_category1](https://user-images.githubusercontent.com/60825409/206925347-527fac61-32d9-4129-9bfd-f9e2c27ebc75.png)
 
@@ -225,17 +225,17 @@ iv. It also contains the User Section
 
 ![authority_commt3](https://user-images.githubusercontent.com/60825409/206926577-f4d64c0f-5489-401f-9c5c-ccf7ce34a3ef.png)
 
-> Script to check how many users of the website actually commented.
+> Script to check how many users of the website commented.
 
 ![Comments1](https://user-images.githubusercontent.com/60825409/206926702-7db51067-dcfe-4613-a3ca-f7259d2485de.png)
 
->> Script to instantiate comment class ( that is to actually call the class created for the comment section) 
+>> Script to instantiate comment class ( that is to call the class created for the comment section) 
 
 ![comment_instantiation](https://user-images.githubusercontent.com/60825409/206926744-b0298e6a-0609-4d51-8445-d34a70f31d3f.png)
 
 ![Instantiate_comment2](https://user-images.githubusercontent.com/60825409/206926765-98dfe5ae-b047-4742-a40b-7849b95e506c.png)
 
-> PHP script to change the status of the comment in DB to either 'unapproved' or 'approved' dynamically with ease .
+> PHP script to change the status of the comment in DB to either 'unapproved' or 'approved' dynamically with ease.
 
 ![Change_Status_commt1](https://user-images.githubusercontent.com/60825409/206926812-5db8322f-0163-4640-ba38-a0735812f7cb.png)
 
@@ -246,7 +246,7 @@ iv. It also contains the User Section
 
 ![Dashboard_page](https://user-images.githubusercontent.com/60825409/206927733-51db3b3f-dc43-4757-956c-8f412c137c22.png)
 
-> Number of user registered or logged-in to admin panel :
+> Number of users registered or logged in to the admin panel :
 
 ![Num_of_users](https://user-images.githubusercontent.com/60825409/206927743-ab24443a-02e8-4b1c-9a1b-03151aeb1bb3.png)
 
@@ -254,20 +254,20 @@ iv. It also contains the User Section
 
 ![Num_of_comments](https://user-images.githubusercontent.com/60825409/206927854-f4ab0794-dbb9-4fda-a8b9-da05f4d17d52.png)
 
-> Number of category used by content creators ( publishers, editor, copywriter , sales marketer ) etc.
+> Number of categories used by content creators ( publishers, editors, copywriters, sales marketers), etc.
 
 ![Numb_of_categories](https://user-images.githubusercontent.com/60825409/206927916-9588c299-94ab-48c3-b709-55bbb63151f9.png)
 
-> Number of post on the DB table (post)
+> Number of posts on the DB table (post)
 
 ![Num_of_post](https://user-images.githubusercontent.com/60825409/206927937-7610f7a1-e857-4b20-ad6c-e8737989de5d.png)
 
 ## SECTION 7 :
-## This section consist the profile of current user logged into the Admin Panel.
+## This section consists of the profile of the current user logged into the Admin Panel.
 
 ![ProfilePage](https://user-images.githubusercontent.com/60825409/206928551-529a2ea4-db6e-4b28-8571-4f06e4d2cecd.png)
 
-> HTML tags and PHP scripts that allows user to update their profiles e.g headshot, name , phone numbers etc.
+> HTML tags and PHP scripts that allows user to update their profiles e.g headshot, name, phone numbers, etc.
 
 
 ![Profile1](https://user-images.githubusercontent.com/60825409/206928591-63ef1417-9b70-42f1-bb4e-99de7ad7d952.png)
@@ -279,7 +279,7 @@ iv. It also contains the User Section
 ![Profile4](https://user-images.githubusercontent.com/60825409/206928610-25c7acfa-ea94-49f3-93c9-5a65d4e4cec3.png)
 
 
-# This section is now where all data (behind the scene work)  from the DB is displayed for the public, dynamically with ease .
+# This section is now where all data (behind the scene work)  from the DB is displayed for the public, dynamically with ease.
 
 ## FRONT END (user interface display ).
 ## SECTION 1
@@ -294,11 +294,11 @@ iv. It also contains the User Section
 
 ![Recent_Post_Section](https://user-images.githubusercontent.com/60825409/206928876-4f9eed3f-cd5b-41b8-b220-fa9b9363fff2.png)
 
-> Display blog post (articles) based on categories.
+> Display blog posts (articles) based on categories.
 
 ![Display_BaseON_Cats](https://user-images.githubusercontent.com/60825409/206928907-9fa324a4-a894-494c-b56a-6ee007ac996e.png)
 
->> This feature is so amazing, I always use to wonder how it happened, I finally built it out myself, it's called single post display ( when you search a keyword on the search tab, normally a post or two appears, when a particular post is clicked it eventually opens up singly ) . It was pretty fun building out this feature.
+>> This feature is so amazing, I always use to wonder how it happened, and I finally built it out myself, it's called single post display ( when you search a keyword on the search tab, normally a post or two appears, when a particular post is clicked it eventually opens up singly ). It was pretty fun building out this feature.
 
 ![Display_BaseON_Cats](https://user-images.githubusercontent.com/60825409/206929087-0d16346d-7d3a-463c-b456-3fd5e1d99293.png)
 
@@ -330,9 +330,9 @@ iv. It also contains the User Section
 
 ## SECTION 3 :
 
-## Single Post Display Feature totally explained.
+## Single Post Display Feature explained.
 
-1. Post is first searched on search tab to give you the image below.
+1. Post is first searched on the search tab to give you the image below.
 
 ![Single_Display](https://user-images.githubusercontent.com/60825409/206929673-25b046b9-346f-4895-a442-ff90d365c49d.png)
 
@@ -343,7 +343,7 @@ iv. It also contains the User Section
 ![Blog_content](https://user-images.githubusercontent.com/60825409/206929716-a4647041-e28d-4282-9639-d8f9ad57ebce.png)
 
 
->> PHP script that makes the  blog post or article to be search using the search tab.
+>> PHP script that makes the blog post or article be searched using the search tab.
 
 ![search_open_singly1](https://user-images.githubusercontent.com/60825409/206929792-77b1362e-f36d-4cae-9862-95b60b423bae.png)
 
@@ -357,7 +357,7 @@ iv. It also contains the User Section
 
 ![search_post_wholly3](https://user-images.githubusercontent.com/60825409/206929858-8cf7215e-aa2a-4c97-84b6-32ef9ffbb27e.png)
 
-# SECTION 4: The whole Front end of this great and amazing project put together .
+# SECTION 4: The whole Front end of this great project put together.
 
 ![Cover_Blogging_System](https://user-images.githubusercontent.com/60825409/206929926-e5063f7d-990b-4c40-aeb1-9ae4175f0673.png)
 
@@ -394,4 +394,3 @@ iv. It also contains the User Section
 # The whole piece in one.
 
 ![Blogging_System_Fully](https://user-images.githubusercontent.com/60825409/206930128-9494225a-f419-4609-b41f-069a06cb320a.png)
-
