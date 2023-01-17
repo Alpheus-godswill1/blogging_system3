@@ -22,6 +22,7 @@
 
 ![SQL Background](https://user-images.githubusercontent.com/60825409/212804751-fe2dbd92-e769-48f0-91eb-4a43be6b6db7.png)
 7. Go back to step 1 and follow through till step 3, then paste the content into the `SQL panel` which you just opened.
+
 8. click `Go` which is on the bottom-right-corner of the SQL page
 
 
