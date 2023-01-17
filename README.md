@@ -11,6 +11,7 @@
 > A content management system is a software application that allows you to create and deliver digital content. A CMS lets you easily edit your digital experiences and then publish that experience to the web and other digital channels. According to https://business.adobe.com
 
 ## How to setup this Project Database after downloading the XAMPP control Panel:
+0. Start the XAMPP control panel.
 1. Navigate to `SQL_FILES` folder
 2. Open the `content_management_system.sql` file using a text editor, preferably, VS code.
 3. Copy the whole content of the file.
