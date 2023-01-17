@@ -14,7 +14,13 @@
 1. Navigate to `SQL_FILES` folder
 2. Open the `content_management_system.sql` file using a text editor, preferably, VS code.
 3. Copy the whole content of the file.
-4. 
+4. On your browser, preferably google chrome, paste this `http://localhost/phpmyadmin` on the search tab.
+5. Your background should look like the one below.
+
+![Phpmyadmin GUI](https://user-images.githubusercontent.com/60825409/212804302-0f8d82e8-0cd4-4526-a5c5-18d71fce5c6c.png)
+6. Click on the button `SQL` you should see the exact type of image below.
+
+
 
 ### Abbreviations that will be used and their meaning :
 > DB - Database
