@@ -386,27 +386,6 @@ iv. It also contains the User Section
 
 ![Recent_Post_Section](https://user-images.githubusercontent.com/60825409/206929970-1c7ba8dd-fca8-42c8-8ebb-cd5b0098124b.png)
 
-![Blog_Comment_Field](https://user-images.githubusercontent.com/60825409/206929979-c92e7a13-a4c7-41a0-bac9-6c06b597f111.png)
-
-![BlogComment_SubmitBtn](https://user-images.githubusercontent.com/60825409/206929998-802c73e8-ff26-4242-81c2-12231ac4afee.png)
-
-![Blog_comments_Sect](https://user-images.githubusercontent.com/60825409/206929987-12594ea7-fac2-4007-a448-a50c1c5e2aa6.png)
-
-![Categories_Section](https://user-images.githubusercontent.com/60825409/206930053-617141ef-9b23-4d67-87fa-0b8abf9d6be3.png)
-
-![Display_BaseON_Cats](https://user-images.githubusercontent.com/60825409/206930025-c59b2eda-f132-4ac7-a82c-42b0444ce144.png)
-
-![Single_Display - Copy](https://user-images.githubusercontent.com/60825409/206930027-1f1bf433-30ab-45a3-9d60-0e7be6962e3d.png)
-
-![Single_Display2](https://user-images.githubusercontent.com/60825409/206930030-35620d70-33f3-464d-8b7c-1475e1391718.png)
-
-![Single_Post_Display](https://user-images.githubusercontent.com/60825409/206930035-126dfe98-a31e-4be5-99b3-e47199eaecb9.png)
-
-![Blog_content](https://user-images.githubusercontent.com/60825409/206930077-1775d4cc-aace-46fd-a77c-0bb1941a230e.png)
-
-![posts](https://user-images.githubusercontent.com/60825409/206930083-f2769162-b2b0-4b7a-a045-be7c16d866d5.png)
-
-![Footer](https://user-images.githubusercontent.com/60825409/206930110-17f48c1f-f36e-4b5d-a5d0-0f707307bafc.png)
 
 # The whole piece in one.
 
